@@ -1,0 +1,65 @@
+package com.ems.${package.ModuleName}.adapter;
+
+import ${package.Entity}.${entity};
+import com.ems.${package.ModuleName}.entity.dto.${entity}Dto;
+import com.ems.${package.ModuleName}.entity.vo.${entity}Vo;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * @desc po、vo、dto 转换工具
+ * 注意：特定场景下请Diy
+ * @author ${author}
+ * @date ${date}
+ */
+@Slf4j
+public class ${entity}Adapter {
+
+    /**
+     * ${entity}Dto转换${entity}
+     * @param source
+     * @return ${entity}
+     */
+    public static ${entity} adapt(${entity}Dto source) {
+        try {
+            if (source == null) {
+                return null;
+            }
+            ${entity} resp = new ${entity}();
+            resp.setId(source.getId());
+            #foreach($field in ${table.fields})
+            #if("$!field.propertyName" != "createdAt" && "$!field.propertyName" != "createdBy"
+            && "$!field.propertyName" != "updatedAt" && "$!field.propertyName" != "updatedBy" )
+            resp.set${field.capitalName}(source.get${field.capitalName}());
+            #end#end
+            return resp;
+        } catch (Exception e) {
+            log.warn("dto转换${entity}时发生异常：" + e.getMessage(), e);
+            return null;
+        }
+    }
+
+    /**
+     * ${entity}转换${entity}Vo
+     * @param source
+     * @return ${entity}Vo
+     */
+    public static ${entity}Vo adapt(${entity} source) {
+        try {
+            if (source == null) {
+                return null;
+            }
+            ${entity}Vo resp = new ${entity}Vo();
+            resp.setId(source.getId());
+            #foreach($field in ${table.fields})
+            #if("$!field.propertyName" != "createdAt" && "$!field.propertyName" != "createdBy"
+            && "$!field.propertyName" != "updatedAt" && "$!field.propertyName" != "updatedBy" )
+            resp.set${field.capitalName}(source.get${field.capitalName}());
+            #end#end
+            return resp;
+        } catch (Exception e) {
+            log.warn("${entity}转换vo时发生异常：" + e.getMessage(), e);
+            return null;
+        }
+    }
+}
