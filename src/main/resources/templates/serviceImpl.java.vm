@@ -1,0 +1,132 @@
+package ${package.ServiceImpl};
+
+import ${package.Entity}.${entity};
+import com.ems.${package.ModuleName}.entity.dto.${entity}Dto;
+import com.ems.${package.ModuleName}.entity.vo.${entity}Vo;
+import com.ems.${package.ModuleName}.adapter.${entity}Adapter;
+import ${package.Mapper}.${table.mapperName};
+import ${package.Service}.${table.serviceName};
+import ${superServiceImplClassPackage};
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.util.CollectionUtils;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.ems.common.exception.BusinessStatusException;
+
+import static com.ems.common.exception.SystemExceptionEnum.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @desc todo:
+ * @author ${author}
+ * @date ${date}
+ */
+@Service
+@Slf4j
+public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> implements ${table.serviceName} {
+
+    @Autowired
+    private ${table.mapperName} ${table.entityPath}Mapper;
+
+
+    public ${entity}Vo findById(${entity}Dto ${table.entityPath}Dto){
+        if(${table.entityPath}Dto!=null&& ${table.entityPath}Dto.getId()!=null){
+            ${entity}Vo ${table.entityPath}Vo= ${entity}Adapter.adapt(${table.entityPath}Mapper.selectById(${table.entityPath}Dto.getId()));
+            return ${table.entityPath}Vo!=null? ${table.entityPath}Vo.getDeleted()==0? ${table.entityPath}Vo:null:null;
+        }else{
+            throw new BusinessStatusException("主键查询时查询主键不能为空");
+        }
+    }
+
+    public ${entity}Vo findOne(${entity}Dto ${table.entityPath}Dto){
+        if(${table.entityPath}Dto!=null){
+            QueryWrapper<${entity}> wrapper=new QueryWrapper<>();
+            ${entity} ${table.entityPath} = ${entity}Adapter.adapt(${table.entityPath}Dto);
+            ${table.entityPath}.setDeleted(0);
+            wrapper.setEntity(${table.entityPath});
+            ${entity}Vo ${table.entityPath}Vo= ${entity}Adapter.adapt(${table.entityPath}Mapper.selectOne(wrapper));
+            return ${table.entityPath}Vo!=null? ${table.entityPath}Vo.getDeleted()==0? ${table.entityPath}Vo:null:null;
+        }else{
+            throw new BusinessStatusException("条件查询时查询条件不能为空");
+        }
+    }
+
+    public List<${entity}Vo> findList(${entity}Dto ${table.entityPath}Dto){
+        if(${table.entityPath}Dto!=null){
+            QueryWrapper<User> wrapper=new QueryWrapper<>();
+            ${entity} ${table.entityPath} = ${entity}Adapter.adapt(${table.entityPath}Dto);
+            ${table.entityPath}.setDeleted(0);
+            wrapper.setEntity(${table.entityPath});
+            List<${entity}> ${table.entityPath}s= ${table.entityPath}Mapper.selectList(wrapper);
+            List<${entity}Vo> ${table.entityPath}Vos=new ArrayList<>();
+            if(!CollectionUtils.isEmpty(${table.entityPath}s))
+            ${table.entityPath}s.forEach(entity-> ${table.entityPath}Vos.add(${entity}Adapter.adapt(${table.entityPath})));
+            return ${table.entityPath}Vos;
+        }else{
+            throw new BusinessStatusException("条件查询时查询条件不能为空");
+        }
+
+    }
+
+    public  Page<${entity}Vo> findPageList(Page ${table.entityPath}Page,${entity}Dto ${table.entityPath}Dto){
+        try{
+            QueryWrapper queryWrapper=new QueryWrapper();
+            ${entity} ${table.entityPath} = ${entity}Adapter.adapt(${table.entityPath}Dto);
+            ${table.entityPath}.setDeleted(0);
+            queryWrapper.setEntity(${table.entityPath});
+            Page<${entity}> page=(Page)userMapper.selectPage(${table.entityPath}Page,queryWrapper);
+            List<${entity}Vo> ${table.entityPath}Vos=new ArrayList<>();
+            if(!CollectionUtils.isEmpty(page.getRecords())){
+                List<${entity}> ${table.entityPath}s=page.getRecords();
+                ${table.entityPath}s.forEach(entity-> ${table.entityPath}Vos.add(${entity}Adapter.adapt(entity)));
+            }
+            return(Page)new Page()
+            .setCurrent(${table.entityPath}Page.getCurrent())
+            .setSize(${table.entityPath}Page.getSize())
+            .setTotal(${table.entityPath}Page.getTotal())
+            .setPages(${table.entityPath}Page.getPages())
+            .setRecords(${table.entityPath}Vos);
+        }catch(Exception e){
+            throw new BusinessStatusException("请确认排序字段及格式是否正确");
+        }
+    }
+
+    public Integer saveOne(${entity}Dto ${table.entityPath}Dto){
+        try{
+            return ${table.entityPath}Mapper.insert(${entity}Adapter.adapt(${table.entityPath}Dto));
+        }catch(DataAccessException dataAccessException){
+            throw new BusinessStatusException(DBERROSTATUS.code(),DBERROSTATUS.message());
+        }
+    }
+
+    public Integer modifyById(${entity}Dto ${table.entityPath}Dto){
+        if(findById(${table.entityPath}Dto)!=null)
+            return ${table.entityPath}Mapper.updateById(${entity}Adapter.adapt(${table.entityPath}Dto));
+        else{
+            throw new BusinessStatusException("待修改的数据不存在");
+        }
+    }
+
+    public Integer removeById(${entity}Dto ${table.entityPath}Dto){
+        if(findById(${table.entityPath}Dto)!=null){
+            ${entity} ${table.entityPath} = ${entity}Adapter.adapt(${table.entityPath}Dto);
+            ${table.entityPath}.setDeleted(1);
+            return ${table.entityPath}Mapper.updateById(${table.entityPath});
+        }else{
+            throw new BusinessStatusException("待删除的数据不存在");
+        }
+    }
+
+    public Integer removeByIdLogic(${entity}Dto ${table.entityPath}Dto){
+        if(findById(${table.entityPath}Dto)!=null){
+            return ${table.entityPath}Mapper.deleteById(${table.entityPath}Dto.getId());
+        }else{
+            throw new BusinessStatusException("待删除的数据不存在");
+        }
+    }
+}

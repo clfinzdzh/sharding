@@ -1,0 +1,13 @@
+package ${package.Mapper};
+
+import ${package.Entity}.${entity};
+import ${superMapperClassPackage};
+
+/**
+ * @desc todo:
+ * @author ${author}
+ * @date ${date}
+ */
+public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
+
+}
