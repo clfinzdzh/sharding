@@ -1,6 +1,7 @@
 package com.ems.${package.ModuleName}.entity.dto;
 
 import com.ems.common.base.BaseEntity;
+import java.time.LocalDateTime;
 import lombok.Data;
 
 /**
@@ -15,9 +16,7 @@ public class ${entity}Dto extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     #foreach($field in ${table.fields})
-    #if("$!field.propertyName" != "createdAt" && "$!field.propertyName" != "createdBy"
-    && "$!field.propertyName" != "updatedAt" && "$!field.propertyName" != "updatedBy" )
     private ${field.propertyType} ${field.propertyName};
 
-    #end#end
+    #end
 }

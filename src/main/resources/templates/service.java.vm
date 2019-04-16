@@ -16,36 +16,36 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
     /**
-     * @desc 根据主键查询一条记录
-     * @param ${table.entityPath}Dto
+     * @desc 根据主键查询
+     * @param id
      * @return
     */
-    ${entity}Vo findById(${entity}Dto ${table.entityPath}Dto);
+    ${entity} findById(String id);
 
     /**
-     * @desc 根据条件查询一条记录
+     * @desc 根据唯一性约束查询
      * @param ${table.entityPath}Dto
      * @return
      */
-    ${entity}Vo findOne(${entity}Dto ${table.entityPath}Dto);
+    ${entity} findOne(${entity}Dto ${table.entityPath}Dto);
 
     /**
-    * @desc 根据条件查询所有记录
+    * @desc 根据条件查询
     * @param ${table.entityPath}Dto
     * @return
     */
-    List<${entity}Vo> findList(${entity}Dto ${table.entityPath}Dto);
+    List<${entity}> findList(${entity}Dto ${table.entityPath}Dto);
 
     /**
-    * @desc 根据条件查询分页记录
+    * @desc 根据条件查询分页
     * @param ${table.entityPath}Dto
     * @return
     */
-    Page<${entity}Vo> findPageList(Page ${table.entityPath}Page,${entity}Dto ${table.entityPath}Dto);
+    Page<${entity}> findPageList(Page ${table.entityPath}Page,${entity}Dto ${table.entityPath}Dto);
 
     /**
     * @desc 新增一条记录
-    * 注意！！！：请根据具体的新增场景选择性使用
+    * @notice 请根据具体的新增场景选择性使用 ！！！
     * @param ${table.entityPath}Dto
     * @return
     */
@@ -59,16 +59,16 @@ public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
     Integer modifyById(${entity}Dto ${table.entityPath}Dto);
 
     /**
-    * @desc 根据主键删除一条记录，主键不能为空
-    * @param ${table.entityPath}Dto
+    * @desc 根据主键删除一条记录
+    * @param id
     * @return
     */
-    Integer removeById(${entity}Dto ${table.entityPath}Dto);
+    Integer removeById(String id);
 
     /**
-    * @desc 根据主键删除一条记录，主键不能为空（逻辑）
-    * @param ${table.entityPath}Dto
+    * @desc 根据主键删除一条记录（逻辑）
+    * @param id
     * @return
     */
-    Integer removeByIdLogic(${entity}Dto ${table.entityPath}Dto);
+    Integer removeByIdLogic(String id);
 }

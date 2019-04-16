@@ -20,7 +20,7 @@ public class ${entity}Adapter {
      * @param source
      * @return ${entity}
      */
-    public static ${entity} adapt(${entity}Dto source) {
+    public static ${entity} adapt${entity}(${entity}Dto source) {
         try {
             if (source == null) {
                 return null;
@@ -28,8 +28,7 @@ public class ${entity}Adapter {
             ${entity} resp = new ${entity}();
             resp.setId(source.getId());
             #foreach($field in ${table.fields})
-            #if("$!field.propertyName" != "createdAt" && "$!field.propertyName" != "createdBy"
-            && "$!field.propertyName" != "updatedAt" && "$!field.propertyName" != "updatedBy" )
+            #if("$!field.propertyName" != "createdAt"&& "$!field.propertyName" != "updatedAt"  )
             resp.set${field.capitalName}(source.get${field.capitalName}());
             #end#end
             return resp;
@@ -44,7 +43,7 @@ public class ${entity}Adapter {
      * @param source
      * @return ${entity}Vo
      */
-    public static ${entity}Vo adapt(${entity} source) {
+    public static ${entity}Vo adapt${entity}Vo(${entity} source) {
         try {
             if (source == null) {
                 return null;
@@ -52,10 +51,8 @@ public class ${entity}Adapter {
             ${entity}Vo resp = new ${entity}Vo();
             resp.setId(source.getId());
             #foreach($field in ${table.fields})
-            #if("$!field.propertyName" != "createdAt" && "$!field.propertyName" != "createdBy"
-            && "$!field.propertyName" != "updatedAt" && "$!field.propertyName" != "updatedBy" )
             resp.set${field.capitalName}(source.get${field.capitalName}());
-            #end#end
+            #end
             return resp;
         } catch (Exception e) {
             log.warn("${entity}转换vo时发生异常：" + e.getMessage(), e);
