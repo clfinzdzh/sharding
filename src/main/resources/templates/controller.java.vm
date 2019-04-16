@@ -76,18 +76,27 @@ public class ${table.controllerName} {
         Safes.of(${table.entityPath}s).forEach(entity -> vos.add(${entity}Adapter.adapt${entity}Vo(entity)));
         return BaseResult.success(vos);
     }
+
+    /**
+     * @desc 根据条件分页查询
+     * @param field,value
+     * @return
+     */
+    @GetMapping(value="like/{value}")
+    public BaseResult<Page<${entity}Vo>> findLike(String field,@PathVariable("value") String value){
+        Page<${entity}> page = ${table.entityPath}Service.findLike(getPage(),field,value);
+        return BaseResult.success(getPage(page).setRecords(${entity}Adapter.adapt${entity}Vos(page.getRecords())));
+    }
+
     /**
      * @desc 根据条件分页查询
      * @param ${table.entityPath}Dto
      * @return
      */
-    @PostMapping(value="/pageList")
+    @PostMapping(value="/page")
     public BaseResult<Page<${entity}Vo>> findPageList(@RequestBody ${entity}Dto ${table.entityPath}Dto){
         Page<${entity}> page = ${table.entityPath}Service.findPageList(getPage(),${table.entityPath}Dto);
-        List<${entity}Vo> vos = Lists.newArrayList();
-        Safes.of(page.getRecords()).forEach(entity -> vos.add(${entity}Adapter.adapt${entity}Vo(entity)));
-        return BaseResult.success(
-                new Page().setCurrent(page.getCurrent()).setSize(page.getSize()).setTotal(page.getTotal()).setRecords(vos));
+        return BaseResult.success(getPage(page).setRecords(${entity}Adapter.adapt${entity}Vos(page.getRecords())));
     }
 
     /**
@@ -96,7 +105,7 @@ public class ${table.controllerName} {
      * @param ${table.entityPath}Dto
      * @return
      */
-    @PostMapping(value="/one")
+    @PostMapping
     public BaseResult<Integer> saveOne(@Validated @RequestBody ${entity}Dto ${table.entityPath}Dto){
         return BaseResult.success(${table.entityPath}Service.saveOne(${table.entityPath}Dto));
     }

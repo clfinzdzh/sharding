@@ -3,7 +3,8 @@ package com.ems.${package.ModuleName}.adapter;
 import ${package.Entity}.${entity};
 import com.ems.${package.ModuleName}.entity.dto.${entity}Dto;
 import com.ems.${package.ModuleName}.entity.vo.${entity}Vo;
-
+import com.google.common.collect.Lists;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -54,6 +55,24 @@ public class ${entity}Adapter {
             resp.set${field.capitalName}(source.get${field.capitalName}());
             #end
             return resp;
+        } catch (Exception e) {
+            log.warn("${entity}转换vo时发生异常：" + e.getMessage(), e);
+            return null;
+        }
+    }
+
+
+    /**
+     * ${entity}转换${entity}Vo
+     * @param source
+     * @return ${entity}Vo
+     */
+    public static List<${entity}Vo> adapt${entity}Vos(List<${entity}> source) {
+        try {
+            List<${entity}Vo> vos = Lists.newArrayList();
+            if (source != null && source.size() != 0 )
+                source.forEach(entity -> vos.add(adapt${entity}Vo(entity)));
+            return vos;
         } catch (Exception e) {
             log.warn("${entity}转换vo时发生异常：" + e.getMessage(), e);
             return null;

@@ -34,6 +34,7 @@ public class CodeAutoGenerator {
 
     private static String author = "";
 
+
     private static String projectPath = "";
 
     /**
@@ -60,8 +61,8 @@ public class CodeAutoGenerator {
     public static GlobalConfig createGlobalConfig() {
         GlobalConfig gc = new GlobalConfig();
         projectPath = System.getProperty("user.dir");
-        projectPath = projectPath.substring(0, projectPath.lastIndexOf("/") + 1);
-        projectPath = projectPath + "ems" + "/src/main/java/";
+        projectPath = projectPath.substring(0, projectPath.lastIndexOf("\\") + 1);
+        projectPath = projectPath + projectName + "/src/main/java/";
         gc.setOutputDir(projectPath);
         gc.setAuthor(author);
         gc.setOpen(false);
@@ -75,10 +76,12 @@ public class CodeAutoGenerator {
      */
     public static DataSourceConfig createDataSourceConfig() {
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://192.168.200.51:3306/ems?useUnicode=true&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true&serverTimezone=GMT");
+        dsc.setUrl("jdbc:mysql://192.168.200.51:3306/test_ems?useUnicode=true&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true&serverTimezone=GMT");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("1qaz2wsx");
+        //dsc.setUsername("root");
+        //dsc.setPassword("1qaz2wsx");
+        dsc.setUsername("yjanquan");
+        dsc.setPassword("yjanquan");
         return dsc;
     }
 
@@ -113,6 +116,7 @@ public class CodeAutoGenerator {
                 return projectPath + "/com/ems/" + moduleName + "/mapper/xml/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
+
         focList.add(new FileOutConfig("/templates/adapter.java.vm") {
             @Override
             public String outputFile(TableInfo tableInfo) {
@@ -143,12 +147,13 @@ public class CodeAutoGenerator {
     public static StrategyConfig createStrategyConfig() {
         StrategyConfig strategy = new StrategyConfig();
         //设置表前缀
-        strategy.setTablePrefix("ems_");
+        strategy.setTablePrefix("sys_","t_","o_","v_","d_");
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        strategy.setInclude(new String[]{scanner("表名")});
+        String tableNames = scanner("表名");
+        strategy.setInclude(tableNames.split("\\,"));
         strategy.setSuperEntityColumns(new String[]{"id"});
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setSuperEntityClass("com.ems.common.base.BaseEntity");
@@ -176,7 +181,7 @@ public class CodeAutoGenerator {
      */
     public static void main(String[] args) {
         author = scanner("作者");
-        //projectName = scanner("项目名称");
+        projectName = scanner("项目名称");
         moduleName = scanner("模块名称");
         AutoGenerator mpg = new AutoGenerator();
         mpg.setTemplateEngine(new VelocityTemplateEngine());

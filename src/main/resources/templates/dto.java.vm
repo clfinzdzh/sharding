@@ -17,6 +17,5 @@ public class ${entity}Dto extends BaseEntity {
 
     #foreach($field in ${table.fields})
     private ${field.propertyType} ${field.propertyName};
-
     #end
 }

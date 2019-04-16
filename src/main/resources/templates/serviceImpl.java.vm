@@ -59,6 +59,11 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     }
 
     @Override
+    public Page<${entity}> findLike(Page ${table.entityPath}Page,String field,String value){
+        return (Page)${table.entityPath}Mapper.selectPage(${table.entityPath}Page , new QueryWrapper<${entity}>().like(field,value));
+    }
+
+    @Override
     public  Page<${entity}> findPageList(Page ${table.entityPath}Page,${entity}Dto ${table.entityPath}Dto){
         try{
             QueryWrapper queryWrapper = new QueryWrapper();
@@ -100,6 +105,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     @Override
     public Integer removeByIdLogic(String id){
             ${entity} ${table.entityPath} = new ${entity}();
+            ${table.entityPath}.setid(id);
             ${table.entityPath}.setDeleted(1);
             ${table.entityPath}.setUpdatedBy(currentUserService.getCurrentUserName());
             return ${table.entityPath}Mapper.updateById(${table.entityPath});
