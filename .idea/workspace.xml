@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01525ca9-40e4-4925-9fb8-1876387b6dfa" name="Default Changelist" comment="" />
+    <list default="true" id="01525ca9-40e4-4925-9fb8-1876387b6dfa" name="Default Changelist" comment="【update】">
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/RoleManageBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/RoleManageBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/UserManageBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/UserManageBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/UserManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/UserManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/vo/ResourceInfoVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/vo/ResourceInfoVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/vo/RoleInfoVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/vo/RoleInfoVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/ResourceInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/ResourceInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/RoleInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/RoleInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/utils/tree/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/common/util/tree/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/utils/tree/TreeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/common/util/tree/TreeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../ems/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ems/CodeAutoGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ems/CodeAutoGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adapter.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adapter.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/controller.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dto.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dto.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/service.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/service.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/serviceImpl.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/serviceImpl.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vo.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vo.java.vm" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../ems/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,24 +32,202 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/EmsSpringBootApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/adapter/SysUserLoginAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1171">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/controller/SysUserLoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="112" column="13" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/domain/SysUserLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-930">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/dto/SysUserLoginDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-578">
+              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/vo/SysUserLoginVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-98">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/mapper/SysUserLoginMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/mapper/xml/SysUserLoginMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-398" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/service/impl/SysUserLoginServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/BusinessExceptionStatusEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../ems" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/dto/UserLoginDto.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/dto/ResourceInfoDto.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/mapper/UserManageMapper.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/adapter/UserManageAdapter.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/adapter/ResourceInfoAdapter.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/TreeUtil.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/tree/Child.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/tree/TreeUtil.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/tree/Parent.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/utils/TreeUtil.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/vo/ResourceInfoVo.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/utils/tree/Parent.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/EmsSpringBootApplication.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/IResourceInfoService.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/ResourceInfoController.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/vo/RoleInfoVo.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/adapter/RoleInfoAdapter.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/mapper/UserOperHisMapper.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/mapper/TSysConfigMapper.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/OrgServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/common/constants/SysConstant.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/dto/RoleInfoDto.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/utils/tree/TreeUtil.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/common/base/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/common/exception/GlobalExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/RoleManageController.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/ResourceTypeEnum.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/common/service/impl/CurrentUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/RoleManageBusiness.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/ResourceInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/mapper/xml/UserManageMapper.xml" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/IRoleInfoService.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/RoleInfoController.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/BusinessExceptionStatusEnum.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/UserManageBusiness.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/RoleInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/common/exception/SystemExceptionEnum.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/UserDetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/dto/SysUserLoginDto.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/dto.java.vm" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/vo/SysUserLoginVo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/vo.java.vm" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/service.java.vm" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/service/impl/SysUserLoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/adapter.java.vm" />
+        <option value="$PROJECT_DIR$/../ems/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/controller.java.vm" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/controller/SysUserLoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/serviceImpl.java.vm" />
+        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/UserManageController.java" />
+      </list>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="C:\Users\DELL\Desktop\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ems" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ems" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="793" />
@@ -44,13 +244,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552973544069" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555399367788" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ems-common" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.arquillian" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -64,6 +271,89 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.CodeAutoGenerator">
+    <configuration name="CodeAutoGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ems.CodeAutoGenerator" />
+      <module name="code-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResourceTypeEnum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ems.sys.enums.ResourceTypeEnum" />
+      <module name="ems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ems.sys.enums.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleInfoServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ems.sys.service.impl.RoleInfoServiceImpl" />
+      <module name="ems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ems.sys.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TreeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ems.sys.common.util.tree.TreeUtil" />
+      <module name="ems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ems.sys.common.util.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserManageController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ems.sys.controller.UserManageController" />
+      <module name="ems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ems.sys.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmsSpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ems" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ems.EmsSpringBootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeAutoGenerator" />
+        <item itemvalue="Application.ResourceTypeEnum" />
+        <item itemvalue="Application.RoleInfoServiceImpl" />
+        <item itemvalue="Application.UserManageController" />
+        <item itemvalue="Application.TreeUtil" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -75,84 +365,870 @@
       <option name="presentableId" value="Default" />
       <updated>1552973185730</updated>
       <workItem from="1552973187149" duration="445000" />
+      <workItem from="1554690001466" duration="83194000" />
+      <workItem from="1554945181767" duration="76915000" />
     </task>
-    <task id="LOCAL-00001" summary="代码生成工具">
-      <created>1552973235378</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00014" summary="【update】资源添加逻辑修改">
+      <created>1554729119936</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1552973235378</updated>
+      <updated>1554729119936</updated>
     </task>
-    <task id="LOCAL-00002" summary="代码生成工具">
-      <created>1552973324679</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00015" summary="【update】资源添加逻辑修改">
+      <created>1554729443710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1552973324679</updated>
+      <updated>1554729443710</updated>
     </task>
-    <task id="LOCAL-00003" summary="代码生成工具">
-      <created>1552973345421</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00016" summary="【update】资源添加逻辑修改">
+      <created>1554772936782</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1552973345421</updated>
+      <updated>1554772936782</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00017" summary="【update】资源添加逻辑修改">
+      <created>1554773190811</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1554773190811</updated>
+    </task>
+    <task id="LOCAL-00018" summary="【add】工具树">
+      <created>1554778040319</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1554778040319</updated>
+    </task>
+    <task id="LOCAL-00019" summary="【update】资源添加逻辑修改">
+      <created>1554792264518</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1554792264518</updated>
+    </task>
+    <task id="LOCAL-00020" summary="【update】资源添加逻辑修改">
+      <created>1554795193262</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1554795193262</updated>
+    </task>
+    <task id="LOCAL-00021" summary="【update】资源添加逻辑修改">
+      <created>1554797226894</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1554797226894</updated>
+    </task>
+    <task id="LOCAL-00022" summary="【update】资源添加逻辑修改">
+      <created>1554798128759</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1554798128759</updated>
+    </task>
+    <task id="LOCAL-00023" summary="【update】资源添加逻辑修改">
+      <created>1554798516358</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1554798516358</updated>
+    </task>
+    <task id="LOCAL-00024" summary="【update】资源添加逻辑修改">
+      <created>1554801888126</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1554801888126</updated>
+    </task>
+    <task id="LOCAL-00025" summary="【update】资源添加逻辑修改">
+      <created>1554802059470</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1554802059470</updated>
+    </task>
+    <task id="LOCAL-00026" summary="【update】">
+      <created>1554890206771</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1554890206771</updated>
+    </task>
+    <task id="LOCAL-00027" summary="【update】资源添加逻辑修改">
+      <created>1554892021249</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1554892021249</updated>
+    </task>
+    <task id="LOCAL-00028" summary="【update】">
+      <created>1554892369386</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1554892369386</updated>
+    </task>
+    <task id="LOCAL-00029" summary="【update】资源添加逻辑修改">
+      <created>1554892615883</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1554892615883</updated>
+    </task>
+    <task id="LOCAL-00030" summary="【update】">
+      <created>1554892761720</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1554892761720</updated>
+    </task>
+    <task id="LOCAL-00031" summary="【update】资源添加逻辑修改">
+      <created>1554893327984</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1554893327984</updated>
+    </task>
+    <task id="LOCAL-00032" summary="【update】资源添加逻辑修改">
+      <created>1554893380398</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1554893380398</updated>
+    </task>
+    <task id="LOCAL-00033" summary="【update】资源添加逻辑修改">
+      <created>1554896855688</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1554896855688</updated>
+    </task>
+    <task id="LOCAL-00034" summary="【update】资源添加逻辑修改">
+      <created>1554897324667</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1554897324667</updated>
+    </task>
+    <task id="LOCAL-00035" summary="【update】资源添加逻辑修改">
+      <created>1554897628408</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1554897628408</updated>
+    </task>
+    <task id="LOCAL-00036" summary="【update】资源添加逻辑修改">
+      <created>1554899850917</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1554899850917</updated>
+    </task>
+    <task id="LOCAL-00037" summary="【update】资源添加逻辑修改">
+      <created>1554950391005</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1554950391006</updated>
+    </task>
+    <task id="LOCAL-00038" summary="【update】资源添加逻辑修改">
+      <created>1554952449752</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1554952449752</updated>
+    </task>
+    <task id="LOCAL-00039" summary="【update】资源添加逻辑修改">
+      <created>1554958278188</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1554958278188</updated>
+    </task>
+    <task id="LOCAL-00040" summary="【update】资源添加逻辑修改">
+      <created>1554963952223</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1554963952223</updated>
+    </task>
+    <task id="LOCAL-00041" summary="【update】资源添加逻辑修改">
+      <created>1554964804911</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1554964804911</updated>
+    </task>
+    <task id="LOCAL-00042" summary="【update】资源添加逻辑修改">
+      <created>1554965188245</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1554965188245</updated>
+    </task>
+    <task id="LOCAL-00043" summary="【update】资源添加逻辑修改">
+      <created>1554971095612</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1554971095612</updated>
+    </task>
+    <task id="LOCAL-00044" summary="【update】资源添加逻辑修改">
+      <created>1554971171139</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1554971171139</updated>
+    </task>
+    <task id="LOCAL-00045" summary="【update】资源添加逻辑修改">
+      <created>1554981086240</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1554981086240</updated>
+    </task>
+    <task id="LOCAL-00046" summary="【update】资源添加逻辑修改">
+      <created>1555047556348</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1555047556348</updated>
+    </task>
+    <task id="LOCAL-00047" summary="【update】">
+      <created>1555053908162</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1555053908162</updated>
+    </task>
+    <task id="LOCAL-00048" summary="【update】">
+      <created>1555296157646</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1555296157646</updated>
+    </task>
+    <task id="LOCAL-00049" summary="【update】">
+      <created>1555296255714</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1555296255714</updated>
+    </task>
+    <task id="LOCAL-00050" summary="【update】">
+      <created>1555296314608</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1555296314609</updated>
+    </task>
+    <task id="LOCAL-00051" summary="【update】">
+      <created>1555296324872</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1555296324872</updated>
+    </task>
+    <task id="LOCAL-00052" summary="【update】">
+      <created>1555296345495</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1555296345495</updated>
+    </task>
+    <task id="LOCAL-00053" summary="【update】">
+      <created>1555296958208</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1555296958208</updated>
+    </task>
+    <task id="LOCAL-00054" summary="【add】">
+      <created>1555297377041</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1555297377041</updated>
+    </task>
+    <task id="LOCAL-00055" summary="【update】">
+      <created>1555297505714</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1555297505714</updated>
+    </task>
+    <task id="LOCAL-00056" summary="【update】">
+      <created>1555297659691</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1555297659691</updated>
+    </task>
+    <task id="LOCAL-00057" summary="【update】">
+      <created>1555298967524</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1555298967524</updated>
+    </task>
+    <task id="LOCAL-00058" summary="【update】">
+      <created>1555298990025</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1555298990025</updated>
+    </task>
+    <task id="LOCAL-00059" summary="【update】">
+      <created>1555299734016</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1555299734017</updated>
+    </task>
+    <task id="LOCAL-00060" summary="【update】">
+      <created>1555299754547</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1555299754547</updated>
+    </task>
+    <task id="LOCAL-00061" summary="【update】">
+      <created>1555329583772</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1555329583772</updated>
+    </task>
+    <task id="LOCAL-00062" summary="【update】">
+      <created>1555385239038</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1555385239038</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445000" />
+    <option name="totallyTimeSpent" value="160554000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="793" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27628756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" weight="0.26815644" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49892703" weight="0.4312849" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3039106" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50107294" side_tool="true" weight="0.3944134" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32960895" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.3299356" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" weight="0.27150837" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49892703" visible="true" weight="0.40446928" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3039106" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32960895" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50107294" side_tool="true" weight="0.3944134" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32960895" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32960895" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.3299356" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="代码生成工具" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码生成工具" />
+    <MESSAGE value="配置文件修改" />
+    <MESSAGE value="分页修改" />
+    <MESSAGE value="资源添加逻辑修改" />
+    <MESSAGE value="【add】工具树" />
+    <MESSAGE value="【update】资源添加逻辑修改" />
+    <MESSAGE value="【add】" />
+    <MESSAGE value="【update】" />
+    <option name="LAST_COMMIT_MESSAGE" value="【update】" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/RoleInfoServiceImpl.java</url>
+          <line>147</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/RoleInfoServiceImpl.java</url>
+          <line>156</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/common/util/tree/TreeUtil.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/common/util/tree/TreeUtil.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/UserManageBusiness.java</url>
+          <line>188</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/UserManageController.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/UserManageBusiness.java</url>
+          <line>192</line>
+          <properties />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/common/exception/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/AppCommonTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/TSysConfigController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="55" lean-forward="true" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/common/constants/SysConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/ResourceInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="79" column="59" lean-forward="true" selection-start-line="79" selection-start-column="59" selection-end-line="79" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/IResourceInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/ResourceInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="144" column="42" lean-forward="true" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/mapper/UserManageMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/mapper/xml/UserManageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="35" column="76" lean-forward="true" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/common/service/ICurrentUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/common/exception/BusinessStatusException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding>
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/RoleManageBusiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="43" column="64" lean-forward="true" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+          <folding>
+            <element signature="docComment;class#RoleManageBusiness#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/RoleManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="38" column="67" lean-forward="true" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/IRoleInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/RoleInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar!/org/apache/commons/lang3/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/UserLoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="120" column="98" lean-forward="true" selection-start-line="120" selection-start-column="98" selection-end-line="120" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/RoleInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mapper.java.vm">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/UserDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="93" column="47" lean-forward="true" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/IUserDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/UserDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ems/CodeAutoGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-780">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dto.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/time/LocalDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vo.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/service/ISysUserLoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/service.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/common/exception/SystemExceptionEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/UserManageBusiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-652">
+          <caret line="192" selection-start-line="192" selection-end-line="192" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adapter.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="30" column="96" selection-start-line="30" selection-start-column="96" selection-end-line="30" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="119" selection-start-line="17" selection-start-column="119" selection-end-line="17" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/UserManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/controller.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="63" column="128" selection-start-line="63" selection-start-column="128" selection-end-line="63" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/serviceImpl.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/common/service/impl/CurrentUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/ButtonTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/ResourceTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/ResourceLevelEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/EmsSpringBootApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/adapter/SysUserLoginAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1171">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/controller/SysUserLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="112" column="13" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/domain/SysUserLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-930">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/dto/SysUserLoginDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-578">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/vo/SysUserLoginVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-98">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/mapper/SysUserLoginMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/mapper/xml/SysUserLoginMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/BusinessExceptionStatusEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/service/impl/SysUserLoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -170,9 +1246,81 @@
           </splitter-proportions>
         </settings>
       </state>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>code-generator</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
