@@ -38,7 +38,7 @@ public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
     /**
      * @desc 根据字段模糊查询
-     * @param ${table.entityPath}Dto
+     * @param ${table.entityPath}Page,field,value
      * @return
      */
     Page<${entity}> findLike(Page ${table.entityPath}Page,String field,String value);

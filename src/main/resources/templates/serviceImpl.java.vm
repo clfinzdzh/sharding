@@ -105,7 +105,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     @Override
     public Integer removeByIdLogic(String id){
             ${entity} ${table.entityPath} = new ${entity}();
-            ${table.entityPath}.setid(id);
+            ${table.entityPath}.setId(id);
             ${table.entityPath}.setDeleted(1);
             ${table.entityPath}.setUpdatedBy(currentUserService.getCurrentUserName());
             return ${table.entityPath}Mapper.updateById(${table.entityPath});
