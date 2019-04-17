@@ -85,6 +85,8 @@ public class CodeAutoGenerator {
         return dsc;
     }
 
+
+
     /**
      * 各模块的包名的相关配置
      */
