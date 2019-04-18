@@ -20,6 +20,7 @@ import com.ems.common.exception.BusinessStatusException;
 import com.ems.sys.common.service.ICurrentUserService;
 import org.mybatis.spring.MyBatisSystemException;
 import static com.ems.common.exception.SystemExceptionEnum.*;
+import com.ems.common.utils.UuidUtil;
 import java.util.List;
 
 /**
@@ -79,6 +80,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
         try{
             ${table.entityPath}Dto.setCreatedBy(currentUserService.getCurrentUserName());
             ${table.entityPath}Dto.setUpdatedBy(currentUserService.getCurrentUserName());
+            ${table.entityPath}Dto.setId(UuidUtil.uuid());
             return ${table.entityPath}Mapper.insert(${entity}Adapter.adapt${entity}(${table.entityPath}Dto));
         }catch(DataAccessException dataAccessException){
             if (dataAccessException instanceof MyBatisSystemException) {
