@@ -72,9 +72,7 @@ public class ${table.controllerName} {
     @GetMapping(value="/list")
     public BaseResult<List<${entity}Vo>> findList(${entity}Dto ${table.entityPath}Dto){
         List<${entity}> ${table.entityPath}s = ${table.entityPath}Service.findList(${table.entityPath}Dto);
-        List<${entity}Vo> vos = Lists.newArrayList();
-        Safes.of(${table.entityPath}s).forEach(entity -> vos.add(${entity}Adapter.adapt${entity}Vo(entity)));
-        return BaseResult.success(vos);
+        return BaseResult.success(${entity}Adapter.adapt${entity}Vos(${table.entityPath}s));
     }
 
     /**
