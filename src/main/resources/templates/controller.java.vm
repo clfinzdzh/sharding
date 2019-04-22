@@ -49,7 +49,7 @@ public class ${table.controllerName} {
     * @param id
     * @return
     */
-    @GetMapping(value="/{id})")
+    @GetMapping(value="/{id}")
     public BaseResult<${entity}Vo> findById(@PathVariable("id") String id){
         return BaseResult.success(${entity}Adapter.adapt${entity}Vo(${table.entityPath}Service.findById(id)));
     }
