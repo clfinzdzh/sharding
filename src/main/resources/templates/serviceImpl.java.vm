@@ -71,6 +71,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
             queryWrapper.setEntity(${entity}Adapter.adapt${entity}(${table.entityPath}Dto));
             return (Page)${table.entityPath}Mapper.selectPage(${table.entityPath}Page,queryWrapper);
         }catch(Exception e){
+            e.printStackTrace();
             throw new BusinessStatusException(SORTFIELD_EXCEPTION.code(),SORTFIELD_EXCEPTION.message());
         }
     }
@@ -85,6 +86,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
         }catch(DataAccessException dataAccessException){
             if (dataAccessException instanceof MyBatisSystemException) {
                 MyBatisSystemException exception = (MyBatisSystemException) dataAccessException;
+                exception.printStackTrace();
                 throw new BusinessStatusException(INSERT_DATA_EXCEPTION.code(), INSERT_DATA_EXCEPTION.message());
             }
         }
