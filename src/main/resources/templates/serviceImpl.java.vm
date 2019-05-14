@@ -117,7 +117,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
 
     @Override
     public Integer removeByIds(List<String> ids) {
-        if (Safes.of(ids).size() != 0) return ${table.entityPath}Mapper.deleteBatchIds(ids);
-        return 0;
+        if (CollectionUtils.isEmpty(ids)) return 0;
+        return ${table.entityPath}Mapper.deleteBatchIds(ids);
     }
 }
