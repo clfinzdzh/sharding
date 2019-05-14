@@ -78,4 +78,11 @@ public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
     * @return
     */
     Integer removeByIdLogic(String id);
+
+    /**
+    * @param ids
+    * @return
+    * @desc 根据主键批量删除（逻辑）
+    */
+    Integer removeByIds(List<String> ids);
 }

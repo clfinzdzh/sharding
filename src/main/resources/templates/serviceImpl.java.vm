@@ -86,11 +86,11 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
         }catch(DataAccessException dataAccessException){
             if (dataAccessException instanceof MyBatisSystemException) {
                 MyBatisSystemException exception = (MyBatisSystemException) dataAccessException;
-                exception.printStackTrace();
+                log.info("异常信息:{}",exception);
                 throw new BusinessStatusException(INSERT_DATA_EXCEPTION.code(), INSERT_DATA_EXCEPTION.message());
             }
+            throw dataAccessException;
         }
-        return 0;
     }
 
     @Override
@@ -113,5 +113,11 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
             ${table.entityPath}.setDeleted(1);
             ${table.entityPath}.setUpdatedBy(currentUserService.getCurrentUserName());
             return ${table.entityPath}Mapper.updateById(${table.entityPath});
+    }
+
+    @Override
+    public Integer removeByIds(List<String> ids) {
+        if (Safes.of(ids).size() != 0) return ${table.entityPath}Mapper.deleteBatchIds(ids);
+        return 0;
     }
 }
