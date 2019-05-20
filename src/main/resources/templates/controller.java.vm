@@ -137,4 +137,14 @@ public class ${table.controllerName} {
     public BaseResult<Integer> removeByIdLogic(@PathVariable("id") String id){
         return BaseResult.success(${table.entityPath}Service.removeById(id));
     }
+
+    /**
+    * @param ids
+    * @return
+    * @desc 根据主键删除批量删除
+    */
+    @DeleteMapping
+    public BaseResult<Integer> removeByIds(@RequestParam("ids") List<String> ids) {
+        return BaseResult.success(userLoginService.removeByIds(ids));
+    }
 }
