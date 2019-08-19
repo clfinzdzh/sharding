@@ -2,87 +2,26 @@ package ${package.Service};
 
 import ${package.Entity}.${entity};
 import ${superServiceClassPackage};
-import com.ems.${package.ModuleName}.entity.dto.${entity}Dto;
-import com.ems.${package.ModuleName}.entity.vo.${entity}Vo;
+import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;
 import java.util.List;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 
 /**
- * @desc todo:
+ * @desc
  * @author ${author}
  * @date ${date}
  */
 public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
-    /**
-     * @desc 根据主键查询
-     * @param id
-     * @return
-    */
-    ${entity} findById(String id);
+     ${entity} findById(Integer id);
 
-    /**
-     * @desc 根据唯一性约束查询
-     * @param ${table.entityPath}Dto
-     * @return
-     */
-    ${entity} findOne(${entity}Dto ${table.entityPath}Dto);
+     List<${entity}> findByIds(List<Integer> id);
 
-    /**
-    * @desc 根据条件查询
-    * @param ${table.entityPath}Dto
-    * @return
-    */
-    List<${entity}> findList(${entity}Dto ${table.entityPath}Dto);
+     Integer removeById(Integer id);
 
-    /**
-     * @desc 根据字段模糊查询
-     * @param ${table.entityPath}Page,field,value
-     * @return
-     */
-    Page<${entity}> findLike(Page ${table.entityPath}Page,String field,String value);
+     Integer removeByIds(List<Integer> ids);
 
-    /**
-    * @desc 根据条件查询分页
-    * @param ${table.entityPath}Dto
-    * @return
-    */
-    Page<${entity}> findPageList(Page ${table.entityPath}Page,${entity}Dto ${table.entityPath}Dto);
+     Integer updateByCondition(${entity} ${table.entityPath});
 
-    /**
-    * @desc 新增一条记录
-    * @notice 请根据具体的新增场景选择性使用 ！！！
-    * @param ${table.entityPath}Dto
-    * @return
-    */
-    Integer saveOne(${entity}Dto ${table.entityPath}Dto);
-
-    /**
-    * @desc 根据主键更新一条记录，主键不能为空
-    * @param ${table.entityPath}Dto
-    * @return
-    */
-    Integer modifyById(${entity}Dto ${table.entityPath}Dto);
-
-    /**
-    * @desc 根据主键删除一条记录
-    * @param id
-    * @return
-    */
-    Integer removeById(String id);
-
-    /**
-    * @desc 根据主键删除一条记录（逻辑）
-    * @param id
-    * @return
-    */
-    Integer removeByIdLogic(String id);
-
-    /**
-    * @param ids
-    * @return
-    * @desc 根据主键批量删除（逻辑）
-    */
-    Integer removeByIds(List<String> ids);
+     List<${entity}> findByCondition(${entity}QueryDto ${table.entityPath}QueryDto);
 }

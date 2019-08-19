@@ -1,30 +1,20 @@
 package ${package.ServiceImpl};
 
 import ${package.Entity}.${entity};
-import com.ems.${package.ModuleName}.entity.dto.${entity}Dto;
-import com.ems.${package.ModuleName}.adapter.${entity}Adapter;
+import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;
 import ${package.Mapper}.${table.mapperName};
 import ${package.Service}.${table.serviceName};
 import ${superServiceImplClassPackage};
 import lombok.extern.slf4j.Slf4j;
-import com.google.common.collect.Lists;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
+import static com.etcc.enums.CommonFrameBizStatus.NOT_FOUND_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
-import org.springframework.util.CollectionUtils;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.ems.common.exception.BusinessStatusException;
-import com.ems.sys.common.service.ICurrentUserService;
-import org.mybatis.spring.MyBatisSystemException;
-import static com.ems.common.exception.SystemExceptionEnum.*;
-import com.ems.common.utils.UuidUtil;
+import com.etcc.exception.BusinessStatusException;
 import java.util.List;
 
 /**
- * @desc todo:
+ * @desc
  * @author ${author}
  * @date ${date}
  */
@@ -36,88 +26,41 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     @Autowired
     private ${table.mapperName} ${table.entityPath}Mapper;
 
-    @Autowired
-    private ICurrentUserService currentUserService;
-
     @Override
-    public ${entity} findById(String id){
-        return ${table.entityPath}Mapper.selectById(id);
+    public ${entity} findById(Integer id) {
+        ${entity} ${table.entityPath} = ${table.entityPath}Mapper.selectById(id);
+            if (${table.entityPath} != null) return ${table.entityPath};
+            else throw new BusinessStatusException(NOT_FOUND_EXCEPTION);
     }
 
     @Override
-    public ${entity} findOne(${entity}Dto ${table.entityPath}Dto){
-        QueryWrapper queryWrapper = new QueryWrapper(${entity}Adapter.adapt${entity}(${table.entityPath}Dto));
-        return ${table.entityPath}Mapper.selectOne(queryWrapper);
+    public List<${entity}> findByIds(List<Integer> ids) {
+        return ${table.entityPath}Mapper.selectByIds(ids);
     }
 
     @Override
-    public List<${entity}> findList(${entity}Dto ${table.entityPath}Dto){
-        QueryWrapper<${entity}> wrapper = new QueryWrapper<>(${entity}Adapter.adapt${entity}(${table.entityPath}Dto));
-        List<${entity}> ${table.entityPath}s = ${table.entityPath}Mapper.selectList(wrapper);
-        if(CollectionUtils.isEmpty(${table.entityPath}s))
-            ${table.entityPath}s = Lists.newArrayList();
-        return ${table.entityPath}s;
-    }
-
-    @Override
-    public Page<${entity}> findLike(Page ${table.entityPath}Page,String field,String value){
-        return (Page)${table.entityPath}Mapper.selectPage(${table.entityPath}Page , new QueryWrapper<${entity}>().like(field,value));
-    }
-
-    @Override
-    public  Page<${entity}> findPageList(Page ${table.entityPath}Page,${entity}Dto ${table.entityPath}Dto){
-        try{
-            QueryWrapper queryWrapper = new QueryWrapper();
-            queryWrapper.setEntity(${entity}Adapter.adapt${entity}(${table.entityPath}Dto));
-            return (Page)${table.entityPath}Mapper.selectPage(${table.entityPath}Page,queryWrapper);
-        }catch(Exception e){
-            e.printStackTrace();
-            throw new BusinessStatusException(SORTFIELD_EXCEPTION.code(),SORTFIELD_EXCEPTION.message());
-        }
-    }
-
-    @Override
-    public Integer saveOne(${entity}Dto ${table.entityPath}Dto){
-        try{
-            ${table.entityPath}Dto.setCreatedBy(currentUserService.getCurrentUserName());
-            ${table.entityPath}Dto.setUpdatedBy(currentUserService.getCurrentUserName());
-            ${table.entityPath}Dto.setId(UuidUtil.uuid());
-            return ${table.entityPath}Mapper.insert(${entity}Adapter.adapt${entity}(${table.entityPath}Dto));
-        }catch(DataAccessException dataAccessException){
-            if (dataAccessException instanceof MyBatisSystemException) {
-                MyBatisSystemException exception = (MyBatisSystemException) dataAccessException;
-                log.info("异常信息:{}",exception);
-                throw new BusinessStatusException(INSERT_DATA_EXCEPTION.code(), INSERT_DATA_EXCEPTION.message());
-            }
-            throw dataAccessException;
-        }
-    }
-
-    @Override
-    public Integer modifyById(${entity}Dto ${table.entityPath}Dto){
-        if(StringUtils.isEmpty(${table.entityPath}Dto.getId()))
-            throw new BusinessStatusException(PRIMARY_KEY_IS_EMPTY.code(), PRIMARY_KEY_IS_EMPTY.message());
-        ${table.entityPath}Dto.setUpdatedBy(currentUserService.getCurrentUserName());
-        return ${table.entityPath}Mapper.updateById(${entity}Adapter.adapt${entity}(${table.entityPath}Dto));
-    }
-
-    @Override
-    public Integer removeById(String id){
+    public Integer removeById(Integer id) {
+        findById(id);
         return ${table.entityPath}Mapper.deleteById(id);
     }
 
     @Override
-    public Integer removeByIdLogic(String id){
-            ${entity} ${table.entityPath} = new ${entity}();
-            ${table.entityPath}.setId(id);
-            ${table.entityPath}.setDeleted(1);
-            ${table.entityPath}.setUpdatedBy(currentUserService.getCurrentUserName());
-            return ${table.entityPath}Mapper.updateById(${table.entityPath});
+    public Integer removeByIds(List<Integer> ids) {
+        return ${table.entityPath}Mapper.deleteByIds(ids);
     }
 
     @Override
-    public Integer removeByIds(List<String> ids) {
-        if (CollectionUtils.isEmpty(ids)) return 0;
-        return ${table.entityPath}Mapper.deleteBatchIds(ids);
+    public Integer updateByCondition(${entity} ${table.entityPath}) {
+        if (${table.entityPath} != null && ${table.entityPath}.getId() == null) {
+            ${table.entityPath}Mapper.insert(${table.entityPath});
+        } else {
+            ${table.entityPath}Mapper.updateById(${table.entityPath});
+        }
+        return ${table.entityPath}.getId();
+    }
+
+    @Override
+    public List<${entity}> findByCondition(${entity}QueryDto queryDto) {
+        return ${table.entityPath}Mapper.selectByCondition(queryDto);
     }
 }

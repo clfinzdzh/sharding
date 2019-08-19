@@ -1,21 +1,20 @@
 package com.ems.${package.ModuleName}.entity.dto;
 
-import com.ems.common.base.BaseEntity;
-import java.time.LocalDateTime;
+import com.etcc.base.BaseEntity;
 import lombok.Data;
 
 /**
- * @desc todo
- * 注意：特定场景dto对象请根据页面传的参数自定义字段
+ * @desc
  * @author ${author}
  * @date ${date}
  */
 @Data
 public class ${entity}Dto extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
-
     #foreach($field in ${table.fields})
+    #if (${field.propertyName} != "createdAt" && ${field.propertyName} != "createdBy" &&
+          ${field.propertyName} != "updatedAt" && ${field.propertyName} != "updatedBy"&& ${field.propertyName} != "deleted")
     private ${field.propertyType} ${field.propertyName};
+    #end
     #end
 }

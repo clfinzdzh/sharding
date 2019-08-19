@@ -1,7 +1,7 @@
 package ${package.Controller};
-import com.ems.common.base.BaseResult;
-import com.ems.${package.ModuleName}.entity.domain.${entity};
-import com.ems.${package.ModuleName}.adapter.${entity}Adapter;
+import com.etcc.base.BaseResult;
+import com.etcc.${package.ModuleName}.entity.domain.${entity};
+import com.etcc.${package.ModuleName}.adapter.${entity}Adapter;
 #if(${restControllerStyle})
 import org.springframework.web.bind.annotation.*;
 #else
@@ -11,21 +11,23 @@ import org.springframework.stereotype.Controller;
 import ${superControllerClassPackage};
 #end
 import java.util.List;
-import com.ems.common.utils.Safes;
-import com.google.common.collect.Lists;
+import com.etcc.page.Pager;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.etcc.${package.ModuleName}.entity.vo.${entity}QueryVo;
+import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import ${package.Service}.${table.serviceName};
-import com.ems.${package.ModuleName}.entity.dto.${entity}Dto;
-import com.ems.${package.ModuleName}.entity.vo.${entity}Vo;
+import com.etcc.${package.ModuleName}.entity.dto.${entity}Dto;
+import com.etcc.${package.ModuleName}.entity.vo.${entity}Vo;
 import org.springframework.validation.annotation.Validated;
 
 
 /**
- * @desc todo:
+ * @desc
  * @author ${author}
  * @date ${date}
  */
@@ -44,107 +46,40 @@ public class ${table.controllerName} {
     @Autowired
     public ${table.serviceName} ${table.entityPath}Service;
 
-    /**
-    * @desc 根据主键查询
-    * @param id
-    * @return
-    */
     @GetMapping(value="/{id}")
-    public BaseResult<${entity}Vo> findById(@PathVariable("id") String id){
+    public BaseResult<${entity}Vo> findById(@PathVariable("id") Integer id){
         return BaseResult.success(${entity}Adapter.adapt${entity}Vo(${table.entityPath}Service.findById(id)));
     }
 
-    /**
-     * @desc 根据唯一性约束查询
-     * @param ${table.entityPath}Dto
-     * @return
-     */
-    @GetMapping(value="/one")
-    public BaseResult<${entity}Vo> findOne(${entity}Dto ${table.entityPath}Dto){
-        return BaseResult.success(${entity}Adapter.adapt${entity}Vo(${table.entityPath}Service.findOne(${table.entityPath}Dto)));
+    @GetMapping
+    public BaseResult<List<${entity}Vo>> findByIds(@RequestParam("ids") List<Integer> ids) {
+        return BaseResult.success(${entity}Adapter.adapt${entity}Vos(${table.entityPath}Service.findByIds(ids)));
     }
 
-    /**
-     * @desc 根据条件查询
-     * @param ${table.entityPath}Dto
-     * @return
-     */
-    @GetMapping(value="/list")
-    public BaseResult<List<${entity}Vo>> findList(${entity}Dto ${table.entityPath}Dto){
-        List<${entity}> ${table.entityPath}s = ${table.entityPath}Service.findList(${table.entityPath}Dto);
-        return BaseResult.success(${entity}Adapter.adapt${entity}Vos(${table.entityPath}s));
+    @GetMapping("/search")
+    public BaseResult<Pager<${entity}QueryVo>> findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
+                                                     @RequestParam(value = "size", defaultValue = "100") int size,
+                                                     ${entity}QueryDto queryDto) {
+        PageHelper.startPage(page, size);
+        List<Ab> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
+        Pager pager = Pager.pager(new PageInfo(byCondition));
+        pager.setPageData(${entity}Adapter.adapt${entity}QueryVos(byCondition));
+        return BaseResult.success(pager);
     }
 
-    /**
-     * @desc 根据条件分页查询
-     * @param field,value
-     * @return
-     */
-    @GetMapping(value="like/{value}")
-    public BaseResult<Page<${entity}Vo>> findLike(String field,@PathVariable("value") String value){
-        Page<${entity}> page = ${table.entityPath}Service.findLike(getPage(),field,value);
-        return BaseResult.success(getPage(page).setRecords(${entity}Adapter.adapt${entity}Vos(page.getRecords())));
-    }
-
-    /**
-     * @desc 根据条件分页查询
-     * @param ${table.entityPath}Dto
-     * @return
-     */
-    @PostMapping(value="/page")
-    public BaseResult<Page<${entity}Vo>> findPageList(@RequestBody ${entity}Dto ${table.entityPath}Dto){
-        Page<${entity}> page = ${table.entityPath}Service.findPageList(getPage(),${table.entityPath}Dto);
-        return BaseResult.success(getPage(page).setRecords(${entity}Adapter.adapt${entity}Vos(page.getRecords())));
-    }
-
-    /**
-     * @desc 新增一条记录
-     * 注意：根据具体的业务场景选择性使用或者改造
-     * @param ${table.entityPath}Dto
-     * @return
-     */
     @PostMapping
-    public BaseResult<Integer> saveOne(@Validated @RequestBody ${entity}Dto ${table.entityPath}Dto){
-        return BaseResult.success(${table.entityPath}Service.saveOne(${table.entityPath}Dto));
+    public BaseResult<String> updateByCondition(@Validated @RequestBody ${entity}Dto ${table.entityPath}Dto) {
+        return BaseResult.success(${table.entityPath}Service.updateByCondition(${entity}Adapter.adapt${entity}(${table.entityPath}Dto)));
     }
 
-    /**
-     * @desc 根据主键更新
-     * @param ${table.entityPath}Dto
-     * @return
-     */
-    @PutMapping
-    public BaseResult<Integer> modifyById(@RequestBody ${entity}Dto ${table.entityPath}Dto){
-        return BaseResult.success(${table.entityPath}Service.modifyById(${table.entityPath}Dto));
-    }
-
-    /**
-    * @desc 根据主键删除
-    * @param id
-    * @return
-    */
     @DeleteMapping(value="/{id}")
-    public BaseResult<Integer> removeById(@PathVariable("id") String id){
-        return BaseResult.success(${table.entityPath}Service.removeById(id));
+    public BaseResult<AbVo> removeById(@PathVariable("id") Integer id){
+        return BaseResult.success(abService.removeById(id));
     }
 
-    /**
-    * @desc 根据主键删除一条记录（逻辑）
-    * @param id
-    * @return
-    */
-    @DeleteMapping(value="/logic/{id}")
-    public BaseResult<Integer> removeByIdLogic(@PathVariable("id") String id){
-        return BaseResult.success(${table.entityPath}Service.removeById(id));
-    }
-
-    /**
-    * @param ids
-    * @return
-    * @desc 根据主键删除批量删除
-    */
     @DeleteMapping
-    public BaseResult<Integer> removeByIds(@RequestParam("ids") List<String> ids) {
-        return BaseResult.success(userLoginService.removeByIds(ids));
+    public BaseResult<List<AbVo>> removeByIds(@RequestParam("ids") List<Integer> ids) {
+        return BaseResult.success(abService.removeByIds(ids));
     }
+
 }

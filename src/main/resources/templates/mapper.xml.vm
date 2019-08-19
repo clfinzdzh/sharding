@@ -8,30 +8,99 @@
 
     #end
     #if(${baseResultMap})
-        <!-- 通用查询映射结果 -->
         <resultMap id="BaseResultMap" type="${package.Entity}.${entity}">
             #foreach($field in ${table.fields})
-                #if(${field.keyFlag})##生成主键排在第一位
+                #if(${field.keyFlag})
                     <id column="${field.name}" property="${field.propertyName}"/>
                 #end
             #end
-            #foreach($field in ${table.commonFields})##生成公共字段
+            #foreach($field in ${table.commonFields})
                 <result column="${field.name}" property="${field.propertyName}"/>
             #end
             #foreach($field in ${table.fields})
-                #if(!${field.keyFlag})##生成普通字段
+                #if(!${field.keyFlag})
                     <result column="${field.name}" property="${field.propertyName}"/>
                 #end
             #end
         </resultMap>
-
     #end
     #if(${baseColumnList})
-        <!-- 通用查询结果列 -->
-    <sql id="Base_Column_List">
-    #foreach($field in ${table.commonFields})
-    #if(${field.name} == ${field.propertyName})${field.name}#else${field.name} AS ${field.propertyName}#end,
-    #end${table.fieldNames}
+        <sql id="Base_Column_List">
+      #foreach($field in ${table.commonFields})
+            #if(${field.name} == ${field.propertyName})
+                ${field.name}
+            #else
+                ${field.name} AS ${field.propertyName}
+            #end,#end${table.fieldNames}
     </sql>
     #end
+
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from ${table.name}
+        where deleted = 0
+    </select>
+
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from ${table.name}
+        where id in
+        <foreach collection="ids" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+        and deleted = 0
+    </select>
+
+    #if(${baseColumnList})
+        <sql id="Query_Column_List">
+    #foreach($field in ${table.commonFields})
+            #if(${field.name} == ${field.propertyName})
+                ${field.name}
+            #else${field.name} AS ${field.propertyName}
+            #end,#end${table.fieldNames}
+    </sql>
+    #end
+
+    #if(${baseResultMap})
+        <resultMap id="ConditionResultMap" type="${package.Entity}.${entity}">
+            #foreach($field in ${table.fields})
+                #if(${field.keyFlag})
+                    <id column="${field.name}" property="${field.propertyName}"/>
+                #end
+            #end
+            #foreach($field in ${table.commonFields})
+                <result column="${field.name}" property="${field.propertyName}"/>
+            #end
+            #foreach($field in ${table.fields})
+                #if(!${field.keyFlag})
+                    <result column="${field.name}" property="${field.propertyName}"/>
+                #end
+            #end
+        </resultMap>
+    #end
+
+    <select id="selectByCondition" resultMap="ConditionResultMap">
+        select
+        <include refid="Query_Column_List"/>
+        from ${table.name}
+        where deleted = 0
+        order by updated_at desc
+    </select>
+
+    <delete id="deleteById">
+        update ${table.name}
+        set deleted = 1
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteByIds">
+        update ${table.name}
+        set deleted = 1
+        where id in
+        <foreach collection="ids" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

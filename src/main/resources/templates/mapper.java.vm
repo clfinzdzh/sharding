@@ -2,12 +2,30 @@ package ${package.Mapper};
 
 import ${package.Entity}.${entity};
 import ${superMapperClassPackage};
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;
+import java.io.Serializable;
+import java.util.List;
 
 /**
- * @desc todo:
+ * @desc
  * @author ${author}
  * @date ${date}
  */
+@Repository
 public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
+
+    @Override
+    ${entity} selectById(Serializable id);
+
+    @Override
+    int deleteById(Serializable id);
+
+    List<${entity}> selectByIds(@Param("ids") List<Integer> ids);
+
+    int deleteByIds(@Param("ids") List<Integer> ids);
+
+    List<${entity}> selectByCondition(${entity}QueryDto ${table.entityPath}QueryDto);
 
 }
