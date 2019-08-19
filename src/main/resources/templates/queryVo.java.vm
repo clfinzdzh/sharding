@@ -1,0 +1,20 @@
+package com.ems.${package.ModuleName}.entity.vo;
+
+import com.etcc.base.BaseEntity;
+
+import lombok.Data;
+
+/**
+ * @author ${author}
+ * @date ${date}
+ */
+@Data
+public class ${entity}QueryVo extends BaseEntity {
+
+    #foreach($field in ${table.fields})
+        #if (${field.propertyName} != "createdAt" && ${field.propertyName} != "createdBy" &&
+            ${field.propertyName} != "updatedAt" && ${field.propertyName} != "updatedBy"&& ${field.propertyName} != "deleted")
+    private ${field.propertyType} ${field.propertyName};
+        #end
+    #end
+}
