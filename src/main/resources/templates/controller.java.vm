@@ -67,6 +67,14 @@ public class ${table.controllerName} {
         return BaseResult.success(pager);
     }
 
+    @GetMapping("/search")
+    public BaseResult<List<${entity}QueryVo>> findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
+                                                                @RequestParam(value = "size", defaultValue = "100") int size,
+                                                                ${entity}QueryDto queryDto) {
+        List<Ab> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
+        return BaseResult.success(byCondition);
+    }
+
     @PostMapping
     public BaseResult<String> updateByCondition(@Validated @RequestBody ${entity}Dto ${table.entityPath}Dto) {
         return BaseResult.success(${table.entityPath}Service.updateByCondition(${entity}Adapter.adapt${entity}(${table.entityPath}Dto)));

@@ -97,7 +97,7 @@ public class CodeAutoGenerator {
         pc.setController("controller");
         pc.setMapper("mapper");
         pc.setEntity("entity.domain");
-        pc.setService("service");
+        pc.setService("service.interf");
         pc.setServiceImpl("service.impl");
         return pc;
     }

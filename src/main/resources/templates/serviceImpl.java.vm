@@ -29,8 +29,8 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     @Override
     public ${entity} findById(Integer id) {
         ${entity} ${table.entityPath} = ${table.entityPath}Mapper.selectById(id);
-            if (${table.entityPath} != null) return ${table.entityPath};
-            else throw new BusinessStatusException(NOT_FOUND_EXCEPTION);
+            if (${table.entityPath} != null){ return ${table.entityPath};}
+            else {throw new BusinessStatusException(NOT_FOUND_EXCEPTION);}
     }
 
     @Override
