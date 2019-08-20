@@ -27,30 +27,30 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     private ${table.mapperName} ${table.entityPath}Mapper;
 
     @Override
-    public ${entity} findById(Integer id) {
+    public ${entity} findById(String id) {
         ${entity} ${table.entityPath} = ${table.entityPath}Mapper.selectById(id);
             if (${table.entityPath} != null){ return ${table.entityPath};}
             else {throw new BusinessStatusException(NOT_FOUND_EXCEPTION);}
     }
 
     @Override
-    public List<${entity}> findByIds(List<Integer> ids) {
+    public List<${entity}> findByIds(List<String> ids) {
         return ${table.entityPath}Mapper.selectByIds(ids);
     }
 
     @Override
-    public Integer removeById(Integer id) {
+    public Integer removeById(String id) {
         findById(id);
         return ${table.entityPath}Mapper.deleteById(id);
     }
 
     @Override
-    public Integer removeByIds(List<Integer> ids) {
+    public Integer removeByIds(List<String> ids) {
         return ${table.entityPath}Mapper.deleteByIds(ids);
     }
 
     @Override
-    public Integer saveByCondition(${entity} ${table.entityPath}) {
+    public String saveByCondition(${entity} ${table.entityPath}) {
         ${table.entityPath}Mapper.insert(${table.entityPath});
         return ${table.entityPath}.getId();
     }

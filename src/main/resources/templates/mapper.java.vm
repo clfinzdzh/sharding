@@ -22,9 +22,9 @@ public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
     @Override
     int deleteById(Serializable id);
 
-    List<${entity}> selectByIds(@Param("ids") List<Integer> ids);
+    List<${entity}> selectByIds(@Param("ids") List<String> ids);
 
-    int deleteByIds(@Param("ids") List<Integer> ids);
+    int deleteByIds(@Param("ids") List<String> ids);
 
     List<${entity}> selectByCondition(${entity}QueryDto ${table.entityPath}QueryDto);
 

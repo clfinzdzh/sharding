@@ -47,12 +47,12 @@ public class ${table.controllerName} {
     public ${table.serviceName} ${table.entityPath}Service;
 
     @GetMapping(value="/{id}")
-    public BaseResult<${entity}Vo> findById(@PathVariable("id") Integer id){
+    public BaseResult<${entity}Vo> findById(@PathVariable("id") String id){
         return BaseResult.success(${entity}Adapter.adapt${entity}Vo(${table.entityPath}Service.findById(id)));
     }
 
     @GetMapping
-    public BaseResult<List<${entity}Vo>> findByIds(@RequestParam("ids") List<Integer> ids) {
+    public BaseResult<List<${entity}Vo>> findByIds(@RequestParam("ids") List<String> ids) {
         return BaseResult.success(${entity}Adapter.adapt${entity}Vos(${table.entityPath}Service.findByIds(ids)));
     }
 
@@ -79,17 +79,17 @@ public class ${table.controllerName} {
     }
 
     @PutMapping
-    public BaseResult<String> updateByCondition(@Validated @RequestBody ${entity}Dto ${table.entityPath}Dto) {
+    public BaseResult<Integer> updateByCondition(@Validated @RequestBody ${entity}Dto ${table.entityPath}Dto) {
         return BaseResult.success(${table.entityPath}Service.updateByCondition(${entity}Adapter.adapt${entity}(${table.entityPath}Dto)));
     }
 
     @DeleteMapping(value="/{id}")
-    public BaseResult<${entity}Vo> removeById(@PathVariable("id") Integer id){
+    public BaseResult<Integer> removeById(@PathVariable("id") String id){
         return BaseResult.success(${table.entityPath}Service.removeById(id));
     }
 
     @DeleteMapping
-    public BaseResult<List<${entity}Vo>> removeByIds(@RequestParam("ids") List<Integer> ids) {
+    public BaseResult<Integer> removeByIds(@RequestParam("ids") List<String> ids) {
         return BaseResult.success(${table.entityPath}Service.removeByIds(ids));
     }
 

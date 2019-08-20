@@ -13,15 +13,15 @@ import java.util.List;
  */
 public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
-     ${entity} findById(Integer id);
+     ${entity} findById(String id);
 
-     List<${entity}> findByIds(List<Integer> id);
+     List<${entity}> findByIds(List<String> id);
 
-     Integer removeById(Integer id);
+     Integer removeById(String id);
 
-     Integer removeByIds(List<Integer> ids);
+     Integer removeByIds(List<String> ids);
 
-     Integer saveByCondition(${entity} ${table.entityPath});
+     String saveByCondition(${entity} ${table.entityPath});
 
      Integer updateByCondition(${entity} ${table.entityPath});
 
