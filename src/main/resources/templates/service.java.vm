@@ -21,6 +21,8 @@ public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
      Integer removeByIds(List<Integer> ids);
 
+     Integer saveByCondition(${entity} ${table.entityPath});
+
      Integer updateByCondition(${entity} ${table.entityPath});
 
      List<${entity}> findByCondition(${entity}QueryDto ${table.entityPath}QueryDto);

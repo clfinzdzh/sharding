@@ -61,33 +61,36 @@ public class ${table.controllerName} {
                                                      @RequestParam(value = "size", defaultValue = "100") int size,
                                                      ${entity}QueryDto queryDto) {
         PageHelper.startPage(page, size);
-        List<Ab> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
+        List<${entity}> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
         Pager pager = Pager.pager(new PageInfo(byCondition));
         pager.setPageData(${entity}Adapter.adapt${entity}QueryVos(byCondition));
         return BaseResult.success(pager);
     }
 
-    @GetMapping("/search")
-    public BaseResult<List<${entity}QueryVo>> findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
-                                                                @RequestParam(value = "size", defaultValue = "100") int size,
-                                                                ${entity}QueryDto queryDto) {
-        List<Ab> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
+    @GetMapping("/list")
+    public BaseResult<List<${entity}QueryVo>> findByCondition(${entity}QueryDto queryDto) {
+        List<${entity}> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
         return BaseResult.success(byCondition);
     }
 
     @PostMapping
+    public BaseResult<String> saveByCondition(@Validated @RequestBody ${entity}Dto ${table.entityPath}Dto) {
+        return BaseResult.success(${table.entityPath}Service.saveByCondition(${entity}Adapter.adapt${entity}(${table.entityPath}Dto)));
+    }
+
+    @PutMapping
     public BaseResult<String> updateByCondition(@Validated @RequestBody ${entity}Dto ${table.entityPath}Dto) {
         return BaseResult.success(${table.entityPath}Service.updateByCondition(${entity}Adapter.adapt${entity}(${table.entityPath}Dto)));
     }
 
     @DeleteMapping(value="/{id}")
-    public BaseResult<AbVo> removeById(@PathVariable("id") Integer id){
-        return BaseResult.success(abService.removeById(id));
+    public BaseResult<${entity}Vo> removeById(@PathVariable("id") Integer id){
+        return BaseResult.success(${table.entityPath}Service.removeById(id));
     }
 
     @DeleteMapping
-    public BaseResult<List<AbVo>> removeByIds(@RequestParam("ids") List<Integer> ids) {
-        return BaseResult.success(abService.removeByIds(ids));
+    public BaseResult<List<${entity}Vo>> removeByIds(@RequestParam("ids") List<Integer> ids) {
+        return BaseResult.success(${table.entityPath}Service.removeByIds(ids));
     }
 
 }

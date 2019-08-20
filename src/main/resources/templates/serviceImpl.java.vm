@@ -50,13 +50,14 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     }
 
     @Override
-    public Integer updateByCondition(${entity} ${table.entityPath}) {
-        if (${table.entityPath} != null && ${table.entityPath}.getId() == null) {
-            ${table.entityPath}Mapper.insert(${table.entityPath});
-        } else {
-            ${table.entityPath}Mapper.updateById(${table.entityPath});
-        }
+    public Integer saveByCondition(${entity} ${table.entityPath}) {
+        ${table.entityPath}Mapper.insert(${table.entityPath});
         return ${table.entityPath}.getId();
+    }
+
+    @Override
+    public Integer updateByCondition(${entity} ${table.entityPath}) {
+        return ${table.entityPath}Mapper.updateById(${table.entityPath});
     }
 
     @Override
