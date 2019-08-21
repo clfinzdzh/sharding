@@ -79,7 +79,7 @@ public class CodeAutoGenerator {
      */
     public static DataSourceConfig createDataSourceConfig() {
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://192.168.200.51:3306/ems?useUnicode=true&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true&serverTimezone=GMT");
+        dsc.setUrl("jdbc:mysql://192.168.200.51:3306/etcc_biz?useUnicode=true&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true&serverTimezone=GMT");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("yjanquan");
         dsc.setPassword("yjanquan");

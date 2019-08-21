@@ -70,7 +70,7 @@ public class ${table.controllerName} {
     @GetMapping("/list")
     public BaseResult<List<${entity}QueryVo>> findByCondition(${entity}QueryDto queryDto) {
         List<${entity}> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
-        return BaseResult.success(byCondition);
+        return BaseResult.success(${entity}Adapter.adapt${entity}QueryVos(byCondition));
     }
 
     @PostMapping
