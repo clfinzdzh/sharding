@@ -8,6 +8,7 @@ import lombok.Data;
  * @author ${author}
  * @date ${date}
  */
+
 @Data
 public class ${entity}QueryDto extends BaseEntity {
 
@@ -17,4 +18,7 @@ public class ${entity}QueryDto extends BaseEntity {
     private ${field.propertyType} ${field.propertyName};
         #end
     #end
+    private long start;
+
+    private long offset;
 }
