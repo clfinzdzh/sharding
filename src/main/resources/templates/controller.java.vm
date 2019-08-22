@@ -12,8 +12,6 @@ import ${superControllerClassPackage};
 #end
 import java.util.List;
 import com.etcc.page.Pager;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.etcc.page.PageController;
 import com.etcc.${package.ModuleName}.entity.vo.${entity}QueryVo;
 import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;

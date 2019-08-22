@@ -172,7 +172,7 @@ public class CodeAutoGenerator {
         String tableNames = scanner("表名");
         strategy.setInclude(tableNames.split("\\,"));
         strategy.setSuperEntityColumns(new String[]{"id"});
-        strategy.setControllerMappingHyphenStyle(true);
+        strategy.setControllerMappingHyphenStyle(false);
         strategy.setSuperControllerClass("com.etcc.page.PageController");
         strategy.setSuperEntityClass("com.etcc.base.BaseEntity");
         return strategy;
