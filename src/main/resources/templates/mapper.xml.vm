@@ -40,6 +40,7 @@
         <include refid="Base_Column_List"/>
         from ${table.name}
         where deleted = 0
+        and id = #{id}
     </select>
 
     <select id="selectByIds" resultMap="BaseResultMap">

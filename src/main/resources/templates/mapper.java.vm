@@ -17,7 +17,7 @@ import java.util.List;
 public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
 
     @Override
-    ${entity} selectById(Serializable id);
+    ${entity} selectById(@Param("id")Serializable id);
 
     @Override
     int deleteById(Serializable id);
