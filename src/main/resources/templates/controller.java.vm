@@ -56,7 +56,7 @@ public class ${table.controllerName} {
     }
 
     @GetMapping("/search")
-    public BaseResult<Pager> findPage(@RequestParam(value = "page", defaultValue = "1") int page,
+    public BaseResult<Pager> findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
                                              @RequestParam(value = "size", defaultValue = "20") int size,
                                              ${entity}QueryDto queryDto) {
         return BaseResult.success(${table.entityPath}Service.findPage(getPage(page, size), queryDto));
