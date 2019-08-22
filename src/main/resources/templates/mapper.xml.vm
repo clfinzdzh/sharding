@@ -63,25 +63,15 @@
     </sql>
     #end
 
-    #if(${baseResultMap})
-        <resultMap id="ConditionResultMap" type="${package.Entity}.${entity}">
-            #foreach($field in ${table.fields})
-                #if(${field.keyFlag})
-                    <id column="${field.name}" property="${field.propertyName}"/>
-                #end
-            #end
-            #foreach($field in ${table.commonFields})
-                <result column="${field.name}" property="${field.propertyName}"/>
-            #end
-            #foreach($field in ${table.fields})
-                #if(!${field.keyFlag})
-                    <result column="${field.name}" property="${field.propertyName}"/>
-                #end
-            #end
-        </resultMap>
-    #end
+    <select id="selectByCondition" resultMap="BaseResultMap">
+        select
+        <include refid="Query_Column_List"/>
+        from ${table.name}
+        where deleted = 0
+        order by updated_at desc
+    </select>
 
-    <select id="selectByCondition" resultMap="ConditionResultMap">
+    <select id="selectPage" resultMap="BaseResultMap">
         select
         <include refid="Query_Column_List"/>
         from ${table.name}

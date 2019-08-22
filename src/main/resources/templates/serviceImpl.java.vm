@@ -1,6 +1,8 @@
 package ${package.ServiceImpl};
 
 import ${package.Entity}.${entity};
+import com.etcc.page.Pager;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;
 import ${package.Mapper}.${table.mapperName};
 import ${package.Service}.${table.serviceName};
@@ -8,6 +10,7 @@ import ${superServiceImplClassPackage};
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
+import com.etcc.${package.ModuleName}.adapter.${entity}Adapter;
 import static com.etcc.enums.CommonFrameBizStatus.NOT_FOUND_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.etcc.exception.BusinessStatusException;
@@ -64,4 +67,15 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     public List<${entity}> findByCondition(${entity}QueryDto queryDto) {
         return ${table.entityPath}Mapper.selectByCondition(queryDto);
     }
+
+    @Override
+    public long countByCondition(${entity}QueryDto queryDto) {
+        return ${table.entityPath}Mapper.countByCondition(queryDto);
+    }
+
+    @Override
+    public Pager<RegulationQueryVo> findPage(IPage page, ${entity}QueryDto queryDto) {
+        IPage iPage = regulationMapper.selectPage(page, queryDto);
+        return Pager.pager(iPage.getTotal(), iPage.getPages(), ${entity}Adapter.adapt${entity}QueryVos(iPage.getRecords()));
+        }
 }

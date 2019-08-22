@@ -25,5 +25,9 @@ public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
      Integer updateByCondition(${entity} ${table.entityPath});
 
+     long countByCondition(RegulationQueryDto regulationQueryDto);
+
      List<${entity}> findByCondition(${entity}QueryDto ${table.entityPath}QueryDto);
+
+     Pager<${entity}QueryVo> findPage(IPage page, ${entity}QueryDto ${table.entityPath}QueryDto);
 }

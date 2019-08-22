@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01525ca9-40e4-4925-9fb8-1876387b6dfa" name="Default Changelist" comment="【update】">
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-admin/etcc-admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ems-etcc/etcc-admin/etcc-admin-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/demo/adapter/AbCAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/demo/api/IAbCService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/demo/entity/domain/AbC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/demo/entity/dto/AbCDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/demo/entity/dto/AbCQueryDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/demo/entity/vo/AbCQueryVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/demo/entity/vo/AbCVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/BizServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/BizServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/demo/controller/AbCController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/demo/mapper/AbCMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/demo/service/AbCServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ems/CodeAutoGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ems/CodeAutoGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/controller.java.vm" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/../ems/target/" />
@@ -56,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/controller/RegulationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="57" column="88" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="88" />
+            <state relative-caret-position="1200">
+              <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -65,7 +51,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/controller.java.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="1654">
               <caret line="72" column="88" selection-start-line="72" selection-start-column="88" selection-end-line="72" selection-end-column="88" />
             </state>
           </provider>
@@ -74,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/adapter/RegulationAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+            <state relative-caret-position="1230">
+              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -208,48 +194,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ems-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ems-etcc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ems-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ems-generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ems-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ems-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ems-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ems-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ems-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ems-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ems-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ems-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -261,13 +207,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566367268931" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ems-etcc/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -436,6 +382,7 @@
       <workItem from="1554945181767" duration="76915000" />
       <workItem from="1566365500883" duration="3000" />
       <workItem from="1566365525048" duration="1674000" />
+      <workItem from="1566388756926" duration="58000" />
     </task>
     <task id="LOCAL-00014" summary="【update】资源添加逻辑修改">
       <created>1554729119936</created>
@@ -784,13 +731,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163364000" />
+    <option name="totallyTimeSpent" value="163422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25107297" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25482833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -798,7 +744,6 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Problems" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" weight="0.23463687" />
@@ -815,6 +760,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32960895" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.59664804" />
       <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.32936078" />
+      <window_info anchor="bottom" id="Problems" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1135,23 +1081,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/adapter/RegulationAdapter.java">
+    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/controller/RegulationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+        <state relative-caret-position="1200">
+          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/controller/RegulationController.java">
+    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/adapter/RegulationAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="57" column="88" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="88" />
+        <state relative-caret-position="1230">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/controller.java.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="1654">
           <caret line="72" column="88" selection-start-line="72" selection-start-column="88" selection-end-line="72" selection-end-column="88" />
         </state>
       </provider>

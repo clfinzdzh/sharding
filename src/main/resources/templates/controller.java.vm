@@ -57,13 +57,22 @@ public class ${table.controllerName} {
     }
 
     @GetMapping("/search")
-    public BaseResult<Pager<${entity}QueryVo>> findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
-                                                     @RequestParam(value = "size", defaultValue = "100") int size,
-                                                     ${entity}QueryDto queryDto) {
-        queryDto.setOffset(size);
-        queryDto.setStart((page - 1) * size);
+    public BaseResult<Pager> findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
+                                             @RequestParam(value = "size", defaultValue = "20") int size,
+                                             ${entity}QueryDto queryDto) {
+        ${table.entityPath}Service.findPage(getPage(page, size), queryDto);
+        return BaseResult.success(${table.entityPath}Service.findPage(getPage(page, size), queryDto));
+    }
+
+    @PostMapping("/page")
+    public BaseResult findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
+                                      @RequestParam(value = "size", defaultValue = "100") int size,
+                                      @RequestBody ${entity}QueryDto queryDto) {
+        PageHelper.startPage(page, size);
         List<${entity}> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
-        return BaseResult.success(Pager.pager(page, size, ${entity}Adapter.adapt${entity}Vos(byCondition)));
+        Pager pager = Pager.pager(new PageInfo(byCondition));
+        pager.setPageData(${entity}Adapter.adapt${entity}QueryVos(byCondition));
+        return BaseResult.success(pager);
     }
 
     @GetMapping("/list")

@@ -28,4 +28,7 @@ public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
 
     List<${entity}> selectByCondition(${entity}QueryDto ${table.entityPath}QueryDto);
 
+    long countByCondition(${entity}QueryDto ${table.entityPath}QueryDto);
+
+
 }
