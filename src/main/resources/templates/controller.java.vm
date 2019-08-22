@@ -14,6 +14,7 @@ import java.util.List;
 import com.etcc.page.Pager;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.etcc.page.PageController;
 import com.etcc.${package.ModuleName}.entity.vo.${entity}QueryVo;
 import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,15 +57,15 @@ public class ${table.controllerName} {
         return BaseResult.success(${entity}Adapter.adapt${entity}Vos(${table.entityPath}Service.findByIds(ids)));
     }
 
-    @GetMapping("/search")
-    public BaseResult<Pager> findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
+    @GetMapping("/page")
+    public BaseResult<Pager> findPage(@RequestParam(value = "page", defaultValue = "1") int page,
                                              @RequestParam(value = "size", defaultValue = "20") int size,
                                              ${entity}QueryDto queryDto) {
         ${table.entityPath}Service.findPage(getPage(page, size), queryDto);
         return BaseResult.success(${table.entityPath}Service.findPage(getPage(page, size), queryDto));
     }
 
-    @PostMapping("/page")
+    @PostMapping("/search")
     public BaseResult findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
                                       @RequestParam(value = "size", defaultValue = "100") int size,
                                       @RequestBody ${entity}QueryDto queryDto) {

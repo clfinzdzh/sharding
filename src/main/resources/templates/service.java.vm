@@ -1,7 +1,9 @@
 package ${package.Service};
-
+import com.etcc.page.Pager;
 import ${package.Entity}.${entity};
 import ${superServiceClassPackage};
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.etcc.${package.ModuleName}.entity.vo.${entity}QueryVo;
 import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;
 import java.util.List;
 
@@ -25,7 +27,7 @@ public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
      Integer updateByCondition(${entity} ${table.entityPath});
 
-     long countByCondition(RegulationQueryDto regulationQueryDto);
+     long countByCondition(${entity}QueryDto ${table.entityPath}QueryDto);
 
      List<${entity}> findByCondition(${entity}QueryDto ${table.entityPath}QueryDto);
 

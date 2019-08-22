@@ -2,6 +2,7 @@ package com.ems.${package.ModuleName}.entity.dto;
 
 import com.etcc.base.BaseEntity;
 import lombok.Data;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 
 /**
  * @desc
@@ -10,7 +11,7 @@ import lombok.Data;
  */
 
 @Data
-public class ${entity}QueryDto extends BaseEntity {
+public class ${entity}QueryDto extends QueryWrapper{
 
     #foreach($field in ${table.fields})
         #if (${field.propertyName} != "createdAt" && ${field.propertyName} != "createdBy" &&
@@ -18,7 +19,4 @@ public class ${entity}QueryDto extends BaseEntity {
     private ${field.propertyType} ${field.propertyName};
         #end
     #end
-    private long start;
-
-    private long offset;
 }
