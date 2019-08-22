@@ -55,23 +55,11 @@ public class ${table.controllerName} {
         return BaseResult.success(${entity}Adapter.adapt${entity}Vos(${table.entityPath}Service.findByIds(ids)));
     }
 
-    @GetMapping("/page")
+    @GetMapping("/search")
     public BaseResult<Pager> findPage(@RequestParam(value = "page", defaultValue = "1") int page,
                                              @RequestParam(value = "size", defaultValue = "20") int size,
                                              ${entity}QueryDto queryDto) {
-        ${table.entityPath}Service.findPage(getPage(page, size), queryDto);
         return BaseResult.success(${table.entityPath}Service.findPage(getPage(page, size), queryDto));
-    }
-
-    @PostMapping("/search")
-    public BaseResult findByCondition(@RequestParam(value = "page", defaultValue = "1") int page,
-                                      @RequestParam(value = "size", defaultValue = "100") int size,
-                                      @RequestBody ${entity}QueryDto queryDto) {
-        PageHelper.startPage(page, size);
-        List<${entity}> byCondition = ${table.entityPath}Service.findByCondition(queryDto);
-        Pager pager = Pager.pager(new PageInfo(byCondition));
-        pager.setPageData(${entity}Adapter.adapt${entity}QueryVos(byCondition));
-        return BaseResult.success(pager);
     }
 
     @GetMapping("/list")
