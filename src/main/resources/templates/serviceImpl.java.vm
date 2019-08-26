@@ -2,6 +2,7 @@ package ${package.ServiceImpl};
 
 import ${package.Entity}.${entity};
 import com.etcc.page.Pager;
+import com.etcc.utils.Safes;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.etcc.${package.ModuleName}.entity.vo.${entity}QueryVo;
 import com.etcc.${package.ModuleName}.entity.dto.${entity}QueryDto;
