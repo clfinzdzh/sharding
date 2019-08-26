@@ -44,13 +44,16 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
 
     @Override
     public Integer removeById(String id) {
-        findById(id);
-        return ${table.entityPath}Mapper.deleteById(id);
+        ${entity} ${table.entityPath} = new ${entity}();
+        ${table.entityPath}.setId(id);
+        ${table.entityPath}.setDeleted(1);
+        return updateByCondition(regulation);
     }
 
     @Override
     public Integer removeByIds(List<String> ids) {
-        return ${table.entityPath}Mapper.deleteByIds(ids);
+        Safes.of(ids).forEach(id ->removeById(id));
+        return Safes.of(ids).size();
     }
 
     @Override
