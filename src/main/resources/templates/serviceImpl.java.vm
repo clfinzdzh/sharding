@@ -48,7 +48,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
         ${entity} ${table.entityPath} = new ${entity}();
         ${table.entityPath}.setId(id);
         ${table.entityPath}.setDeleted(1);
-        return updateByCondition(regulation);
+        return updateByCondition(${table.entityPath});
     }
 
     @Override
