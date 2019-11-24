@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fj.mapper.JoinQueryMapper">
+
+    <resultMap id="baseResultMap" type="com.fj.entity.JoinQueryEntity">
+        <result column="equip_id" property="equipId"/>
+        <result column="type" property="equipType"/>
+        <result column="name" property="equipName"/>
+        <collection property="equipPartsList" ofType="com.fj.entity.EquipParts">
+            <result column="equip_parts_id" property="equipPartsId"/>
+            <result column="equip_id" property="equipId"/>
+            <result column="name" property="name"/>
+            <result column="type" property="type"/>
+        </collection>
+    </resultMap>
+
+    <select id="queryBaseInfo" resultMap="baseResultMap">
+        SELECT
+        equip.equip_id,equip.name,equip.type,
+        equip_parts.name,equip_parts.type,
+        equip_parts.equip_parts_id,equip_parts.equip_id
+        FROM t_equip AS equip
+        LEFT JOIN t_equip_parts AS equip_parts
+        on equip.equip_id = equip_parts.equip_id
+        <where>
+            <if test="equipIds != null and equipIds.size != 0 ">
+                equip.equip_id IN
+                <foreach collection="equipIds" open="(" item="equipId" close=")" separator=",">
+                    #{equipId}
+                </foreach>
+            </if>
+        </where>
+        limit 2
+    </select>
+
+</mapper>

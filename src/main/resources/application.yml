@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: sharding-demo
+
+server:
+  port: 8090
+
+db0:
+  ds:
+    url: jdbc:mysql://localhost:3306/equip_db_0?characterEncoding=utf8&useSSL=false
+    username: root
+    password:
+    driverClassName: com.mysql.jdbc.Driver
+    databaseName: equip_db_0
+db1:
+  ds:
+    url: jdbc:mysql://localhost:3306/equip_db_1?characterEncoding=utf8&useSSL=false
+    username: root
+    password:
+    driverClassName: com.mysql.jdbc.Driver
+    databaseName: equip_db_1
+
+mybatis-plus:
+  mapper-locations: classpath:com/fj/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
