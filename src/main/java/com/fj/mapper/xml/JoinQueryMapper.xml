@@ -32,5 +32,4 @@
         </where>
         limit 2
     </select>
-
 </mapper>

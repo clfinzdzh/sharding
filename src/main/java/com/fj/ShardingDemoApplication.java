@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableConfigurationProperties
 @EnableTransactionManagement(proxyTargetClass = true)
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@MapperScan(basePackages = "com.fj.mapper")
 public class ShardingDemoApplication {
 
     public static void main(String[] args) {

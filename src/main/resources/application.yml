@@ -5,23 +5,34 @@ spring:
 server:
   port: 8090
 
-db0:
-  ds:
+master:
+  equip0:
     url: jdbc:mysql://localhost:3306/equip_db_0?characterEncoding=utf8&useSSL=false
     username: root
     password:
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
     databaseName: equip_db_0
-db1:
-  ds:
+  equip1:
     url: jdbc:mysql://localhost:3306/equip_db_1?characterEncoding=utf8&useSSL=false
     username: root
     password:
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
     databaseName: equip_db_1
+slave:
+  equip0:
+    url: jdbc:mysql://localhost:3306/equip_dbs_0?characterEncoding=utf8&useSSL=false
+    username: root
+    password:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    databaseName: equip_dbs_0
+  equip1:
+    url: jdbc:mysql://localhost:3306/equip_dbs_1?characterEncoding=utf8&useSSL=false
+    username: root
+    password:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    databaseName: equip_dbs_1
 
 mybatis-plus:
-  mapper-locations: classpath:com/fj/**/*.xml
   configuration:
     map-underscore-to-camel-case: true
 

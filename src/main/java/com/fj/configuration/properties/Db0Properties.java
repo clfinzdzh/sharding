@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 
-@ConfigurationProperties(prefix = "db0.ds")
+@ConfigurationProperties(prefix = "master.equip0")
 @Component
 @Data
 public class Db0Properties {

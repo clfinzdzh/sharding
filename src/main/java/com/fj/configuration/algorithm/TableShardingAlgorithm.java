@@ -50,4 +50,5 @@ public class TableShardingAlgorithm implements SingleKeyTableShardingAlgorithm<I
         }
         return availableName;
     }
+
 }
