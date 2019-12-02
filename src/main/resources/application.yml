@@ -32,6 +32,13 @@ slave:
     driverClassName: com.mysql.cj.jdbc.Driver
     databaseName: equip_dbs_1
 
+masterslave:
+  msname: datasource
+  ms0name: masterslave0
+  ms1name: masterslave1
+  sqlShow: true
+  executorSize: 4
+
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true

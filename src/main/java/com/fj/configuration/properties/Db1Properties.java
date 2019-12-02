@@ -10,5 +10,4 @@ import org.springframework.stereotype.Component;
 @Data
 public class Db1Properties extends Db0Properties {
 
-
 }

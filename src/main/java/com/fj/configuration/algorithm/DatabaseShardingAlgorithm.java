@@ -2,7 +2,9 @@ package com.fj.configuration.algorithm;
 
 import com.dangdang.ddframe.rdb.sharding.api.ShardingValue;
 import com.dangdang.ddframe.rdb.sharding.api.strategy.database.SingleKeyDatabaseShardingAlgorithm;
+import com.fj.configuration.properties.DataSourceConstant;
 import com.google.common.collect.Range;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;
@@ -11,14 +13,16 @@ import java.util.HashSet;
 @Component
 public class DatabaseShardingAlgorithm implements SingleKeyDatabaseShardingAlgorithm<Integer> {
 
+    @Autowired
+    private DataSourceConstant dataSourceConstant;
 
     @Override
     public String doEqualSharding(Collection<String> availableTargetNames, ShardingValue<Integer> shardingValue) {
         Integer value = shardingValue.getValue();
         if (value <= 10) {
-            return "masterslave0";
+            return dataSourceConstant.getMs0name();
         } else {
-            return "masterslave1";
+            return dataSourceConstant.getMs1name();
         }
     }
 
@@ -28,9 +32,9 @@ public class DatabaseShardingAlgorithm implements SingleKeyDatabaseShardingAlgor
         Collection<Integer> values = shardingValue.getValues();
         for (Integer value : values) {
             if (value <= 10) {
-                availableName.add("masterslave0");
+                availableName.add(dataSourceConstant.getMs0name());
             } else {
-                availableName.add("masterslave1");
+                availableName.add(dataSourceConstant.getMs1name());
             }
         }
         return availableName;
@@ -42,9 +46,9 @@ public class DatabaseShardingAlgorithm implements SingleKeyDatabaseShardingAlgor
         Range<Integer> range = shardingValue.getValueRange();
         for (Integer value = range.lowerEndpoint(); value <= range.upperEndpoint(); value++) {
             if (value <= 10) {
-                availableName.add("masterslave0");
+                availableName.add(dataSourceConstant.getMs0name());
             } else {
-                availableName.add("masterslave1");
+                availableName.add(dataSourceConstant.getMs1name());
             }
         }
         return availableName;
