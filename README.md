@@ -40,4 +40,3 @@ Slave_IO_Running: Yes;Slave_SQL_Running: Yes 说明配置成功
 #水平分库策略：（自定义）主键求模、主键一致性hash 范围分片、二进制取模等分片算法，可参考mycat的分片算法
 #水平分表策略：（自定义）根据相关字段，定义路由策略
 
-#基于mycat的分库分表 https://www.jianshu.com/p/4994a2ca5e81
