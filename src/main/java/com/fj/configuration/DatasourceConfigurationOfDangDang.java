@@ -14,8 +14,7 @@ import com.dangdang.ddframe.rdb.sharding.api.strategy.slave.MasterSlaveLoadBalan
 import com.dangdang.ddframe.rdb.sharding.api.strategy.table.SingleKeyTableShardingAlgorithm;
 import com.dangdang.ddframe.rdb.sharding.api.strategy.table.TableShardingStrategy;
 import com.dangdang.ddframe.rdb.sharding.config.ShardingPropertiesConstant;
-import com.fj.configuration.properties.DataSourceConstant;
-import com.fj.configuration.properties.Db0Properties;
+import com.fj.configuration.properties.*;
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -34,13 +33,18 @@ import java.util.*;
 @Slf4j
 @MapperScan(basePackages = "com.fj.mapper", sqlSessionFactoryRef = "sqlSessionFactory")
 @Configuration
-public class DatasourceConfiguration {
+public class DatasourceConfigurationOfDangDang {
 
     @Autowired
     private DataSourceConstant dataSourceConstant;
-
     @Autowired
-    private Db0Properties db0Properties, db0S0Properties, db1Properties, db1S0Properties;
+    private Db0Properties db0Properties;
+    @Autowired
+    private Db1Properties db1Properties;
+    @Autowired
+    private Db0S0Properties db0S0Properties;
+    @Autowired
+    private Db1S0Properties db1S0Properties;
 
     @Autowired
     private SingleKeyDatabaseShardingAlgorithm databaseShardingAlgorithm;
@@ -109,6 +113,7 @@ public class DatasourceConfiguration {
         sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/fj/**/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
+
     /**
      * 分库分表数据源的事务管理器
      */
@@ -117,6 +122,7 @@ public class DatasourceConfiguration {
                                                                              DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
+
     /**
      * 配置默认数据源
      */
@@ -164,3 +170,4 @@ public class DatasourceConfiguration {
 
 
 }
+
