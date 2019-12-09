@@ -2515,3 +2515,825 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2019-12-09 18:35:08.983 INFO [main] com.etcc.BizServiceApplication [Jdk14Logger.java : 87] Started BizServiceApplication in 36.21 seconds (JVM running for 38.485)
 2019-12-09 18:35:10.094 INFO [main] io.lettuce.core.EpollProvider [Slf4JLogger.java : 101] Starting without optional epoll library
 2019-12-09 18:35:10.098 INFO [main] io.lettuce.core.KqueueProvider [Slf4JLogger.java : 101] Starting without optional kqueue library
+2019-12-09 18:35:37.401 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='8e9d3354-d65b-4bc6-8905-3b148ca2e5c6', createMillisTime=1575887735379, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:35:37.402 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:36:09.419 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='1ef5b412-b7d7-4e25-b1df-c0ff80910c0b', createMillisTime=1575887767403, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:36:09.420 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:36:41.439 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='69762e23-6d02-4711-9db1-3c3ce9c790cb', createMillisTime=1575887799421, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:36:41.441 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:37:13.458 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='ef8d5d79-34db-4def-885f-c3ff31e7fae5', createMillisTime=1575887831442, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:37:13.459 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:37:45.477 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='08a0c419-c2d1-4658-b1ce-f376be6d0037', createMillisTime=1575887863459, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:37:45.478 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:38:12.488 INFO [http-nio-8763-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 180] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-12-09 18:38:12.488 INFO [http-nio-8763-exec-1] o.s.web.servlet.DispatcherServlet [Jdk14Logger.java : 87] FrameworkServlet 'dispatcherServlet': initialization started
+2019-12-09 18:38:12.521 INFO [http-nio-8763-exec-1] o.s.web.servlet.DispatcherServlet [Jdk14Logger.java : 87] FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2019-12-09 18:38:17.497 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='0545e080-261b-42a1-973b-1c06535573e1', createMillisTime=1575887895479, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:38:17.500 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:38:49.519 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='c606bbe5-2269-49c2-b749-dd3449830fd7', createMillisTime=1575887927501, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:38:49.520 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:40:55.989 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='295050c9-0452-451f-b581-a66de6d62532', createMillisTime=1575888053951, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:40:55.990 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:41:37.182 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='92d7d974-dffe-4c2b-a0b6-838bfc68ad02', createMillisTime=1575888093455, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:41:37.183 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:42:35.809 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='555ec73d-8bfc-4682-a3c3-d513a2d66230', createMillisTime=1575888153782, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:42:35.810 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:43:23.858 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='6fd3bdea-1524-44d8-9dff-fa6446332bad', createMillisTime=1575888201830, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:43:23.859 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:44:41.190 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='f24a20b0-4088-4080-a78c-45d46fd569a9', createMillisTime=1575888273689, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:44:41.191 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:45:13.208 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='e6a5bbb3-aaca-4e62-a33b-6e45b46a193b', createMillisTime=1575888311192, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:45:13.209 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:45:45.248 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='d9b4f998-67b7-4b43-b0b1-c9e5ea18f560', createMillisTime=1575888343211, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:45:45.249 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:46:17.267 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='52a84c35-59e9-44e4-a422-85fe7d269e89', createMillisTime=1575888375251, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:46:17.268 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:46:49.287 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='5af32cf3-0177-4e96-bfe4-a6f11abc7e93', createMillisTime=1575888407269, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:46:49.288 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:47:21.313 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='6509ca88-88da-4e94-af04-0154b125ae3a', createMillisTime=1575888439293, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:47:21.314 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:47:53.337 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='856d8fe5-9a70-430f-91f1-a9114b73bbbf', createMillisTime=1575888471315, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:47:53.337 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:48:25.358 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='fd0f38b7-b340-427c-b76b-52ee0fb12698', createMillisTime=1575888503338, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:48:25.360 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:48:57.401 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='33b888fa-dfd1-4704-9f76-f1009ec3a85c', createMillisTime=1575888535361, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:48:57.402 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:49:29.422 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='e6b0a343-dcf8-412e-af6e-7627d3d67d54', createMillisTime=1575888567403, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:49:29.423 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:50:01.443 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='69d7ef07-8f4d-460c-b216-2b54dd979ab5', createMillisTime=1575888599424, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:50:01.444 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:50:33.463 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='8feff5b4-feca-4e1d-b585-138b579d0185', createMillisTime=1575888631445, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:50:33.463 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:51:05.511 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='72d21c93-d324-4791-bdf5-139c967fb1a1', createMillisTime=1575888663465, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:51:05.511 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:51:37.549 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='bcf995b2-8a46-41d2-b088-37a0ae717615', createMillisTime=1575888695512, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:51:37.550 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:52:09.570 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='fcb58282-183e-4242-b4e0-02100b4ed6a2', createMillisTime=1575888727551, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:52:09.571 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:52:41.589 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='88375d06-f489-4ae0-ae34-63df0a870aa1', createMillisTime=1575888759572, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:52:41.590 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:53:13.628 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='a64cccf1-a258-4de2-b062-6d6c34d60a64', createMillisTime=1575888791591, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:53:13.630 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:53:45.654 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='82738916-bfe2-47e0-93fe-a7d603a6b628', createMillisTime=1575888823632, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:53:45.656 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:54:17.703 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='fdd3baef-a5a1-4748-a58e-a4ff49986d13', createMillisTime=1575888855657, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:54:17.716 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:54:49.734 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='84cd3b62-b122-43ac-b6af-8cdf735b18a9', createMillisTime=1575888887717, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:54:49.735 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:55:21.753 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='4d30e589-93be-4bf1-bc51-32be1aea01c8', createMillisTime=1575888919736, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:55:21.759 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:55:53.775 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='9c437294-fb04-4617-aaea-5be87c1ee63a', createMillisTime=1575888951760, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:55:53.776 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:56:25.795 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='8687c8ee-be36-4cfc-bda8-eee8f10f9502', createMillisTime=1575888983777, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:56:25.796 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:56:57.811 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='18d3e0ca-9dd2-464b-b640-236d7c358174', createMillisTime=1575889015796, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:56:57.811 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:57:29.830 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='dbaf3699-4620-4957-8622-f70f008a6fed', createMillisTime=1575889047813, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:57:29.838 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:58:01.862 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='c5ab02e9-c057-4603-b0c3-ec888adb4787', createMillisTime=1575889079839, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:58:01.863 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:58:33.881 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='55f86146-fd54-4102-9fda-d706a46af592', createMillisTime=1575889111864, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:58:33.882 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted
+2019-12-09 18:59:05.898 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:8768/xxl-job-admin/api, XxlRpcRequestXxlRpcRequest{requestId='15005b4e-692d-4886-b2df-662b9012ea74', createMillisTime=1575889143883, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registry', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}], version='null'}
+2019-12-09 18:59:05.900 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 57] >>>>>>>>>>> xxl-job registry error, registryParam:RegistryParam{registGroup='EXECUTOR', registryKey='data-report-executor', registryValue='192.168.110.227:9901'}
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy629.registry(Unknown Source)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:8768
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:616)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 common frames omitted

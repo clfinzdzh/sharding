@@ -9,10 +9,12 @@ import com.fj.base.BizStatus;
  **/
 public enum CommonFrameBizStatus implements BizStatus {
 
+    SUCCESSFUL(0, "响应成功"),
+
     METHOD_PARAM_VALID_EXCEPTION(403014, "方法入参校验异常"),
 
     UNEXPECTED_EXCEPTION(507003, "出现异常，请联系管理员"),
-    ;
+    PAGE_PARAM_EXCEPTION(507004, "出现异常，请联系管理员");
     private int code;
 
     private String desc;

@@ -1,7 +1,7 @@
 package com.fj.base;
 
 
-import com.etcc.enums.CommonFrameBizStatus;
+import com.fj.enums.CommonFrameBizStatus;
 
 import java.io.Serializable;
 
@@ -36,7 +36,6 @@ public class BaseResult<T> implements Serializable, BizStatus {
     public static BaseResult success() {
         return new BaseResult<>();
     }
-
 
     /**
      * 成功响应有响应数据时
