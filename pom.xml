@@ -49,13 +49,10 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.11</version>
         </dependency>
-
-       <!-- <dependency>
-            <groupId>com.dangdang</groupId>
-            <artifactId>sharding-jdbc-core</artifactId>
-            <version>1.5.3</version>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
--->
         <dependency>
             <groupId>io.shardingjdbc</groupId>
             <artifactId>sharding-jdbc-core</artifactId>

@@ -9,7 +9,7 @@ public class EquipParts {
 
     private int equipPartsId;
 
-    private int equipId;
+    private Long equipId;
 
     private String name;
 

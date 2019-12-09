@@ -2,4 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fj.mapper.EquipMapper">
 
+    <select id="selectPageResult" resultType="com.fj.entity.Equip">
+        select * from t_equip
+        order  by equip_id desc
+        limit #{start},#{size}
+    </select>
+
 </mapper>

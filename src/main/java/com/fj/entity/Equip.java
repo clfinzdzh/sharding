@@ -7,7 +7,7 @@ import lombok.Data;
 @TableName("t_equip")
 public class Equip {
 
-    private Integer equipId;
+    private  Long equipId;
 
     private String name;
 

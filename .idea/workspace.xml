@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01525ca9-40e4-4925-9fb8-1876387b6dfa" name="Default Changelist" comment="【update】">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fj/configuration/algorithm/DBKeyPreciseShardingAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fj/configuration/config/PageConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fj/configuration/algorithm/KeyPreciseShardingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fj/configuration/algorithm/TableKeyPreciseShardingAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fj/configuration/config/DatasourceConfiguraionOfApache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fj/configuration/config/DatasourceConfigurationOfApache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fj/controller/EquipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fj/controller/EquipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fj/entity/Equip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fj/entity/Equip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fj/entity/EquipParts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fj/entity/EquipParts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fj/mapper/EquipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fj/mapper/EquipMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fj/mapper/xml/EquipMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fj/mapper/xml/EquipMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-admin/etcc-admin-service/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-admin/etcc-admin-service/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/TestController.java" beforeDir="false" />
+      <change beforePath="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/monitealarmmap/controller/PseudoMapController.java" beforeDir="false" afterPath="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/monitealarmmap/controller/PseudoMapController.java" afterDir="false" />
+      <change beforePath="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-gateway/src/main/resources/bootstrap-local.properties" beforeDir="false" afterPath="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-gateway/src/main/resources/bootstrap-local.properties" afterDir="false" />
+      <change beforePath="E:/works/ems-etcc/ems-generator/src/main/java/com/ems/CodeAutoGenerator.java" beforeDir="false" afterPath="E:/works/ems-etcc/ems-generator/src/main/java/com/ems/CodeAutoGenerator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/../ems/target/" />
@@ -25,6 +42,35 @@
     <ignored path="$PROJECT_DIR$/../ems-etcc/etcc-mc/etcc-trace/target/" />
     <ignored path="$PROJECT_DIR$/../ems-etcc/etcc-mc/etcc-monitor/target/" />
     <ignored path="$PROJECT_DIR$/../ems-etcc/etcc-gateway/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-auth/etcc-auth-common/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-job/xxl-job-admin/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-auth/etcc-auth-client/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-file/etcc-file-service/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-admin/etcc-admin-api/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-communication/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-mc/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-auth/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-job/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-api/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-file/etcc-file-api/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-gateway/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-resource-base/etcc-resource-base-api/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-job/xxl-job-core/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-communication/etcc-communication-service/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-mc/etcc-monitor/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-file/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-auth/etcc-auth-server/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-mc/etcc-trace/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-resource-base/etcc-resource-base-service/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-communication/etcc-communication-api/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-resource-base/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-admin/etcc-admin-service/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-admin/target/" />
+    <ignored path="E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/target/" />
+    <ignored path="E:/works/ems-etcc/ems-generator/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,28 +86,66 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/controller/RegulationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/base/BizStatus.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/controller.java.vm">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/exception/APPServiceException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1654">
-              <caret line="72" column="88" selection-start-line="72" selection-start-column="88" selection-end-line="72" selection-end-column="88" />
+            <state relative-caret-position="167">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/adapter/RegulationAdapter.java">
+        <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/exception/BusinessStatusException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+            <state relative-caret-position="167">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/handlers/BIZExceptionHandlers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1560">
+              <caret line="59" column="56" lean-forward="true" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/handler/BIZExceptionHandlers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/handler/AUTOFilleDataHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-43">
+              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/handler/AUTOFilleDataHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,6 +173,7 @@
       <find>AppCommonType</find>
       <find>LocalDateTime</find>
       <find>getExpertAreaInfo</find>
+      <find>selectPage</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -106,20 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/tree/Child.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/tree/TreeUtil.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/tree/Parent.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/utils/TreeUtil.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/vo/ResourceInfoVo.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/utils/tree/Parent.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/EmsSpringBootApplication.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/IResourceInfoService.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/ResourceInfoController.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/vo/RoleInfoVo.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/adapter/RoleInfoAdapter.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/mapper/UserOperHisMapper.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/mapper/TSysConfigMapper.java" />
-        <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/OrgServiceImpl.java" />
         <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/common/constants/SysConstant.java" />
         <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/entity/dto/RoleInfoDto.java" />
         <option value="$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/utils/tree/TreeUtil.java" />
@@ -157,6 +228,20 @@
         <option value="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/entity/dto/RegulationQueryDto.java" />
         <option value="$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/controller/RegulationController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/controller.java.vm" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/configuration/config/PageConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/configuration/config/DatasourceConfigurationOfApache.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/entity/Equip.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/controller/EquipController.java" />
+        <option value="E:/works/ems-etcc/ems-generator/src/main/java/com/ems/CodeAutoGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/base/BizStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/exception/BIZExceptionHandlers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/exception/MeaninglessException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/exception/BusinessStatusException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/enums/CommonFrameBizStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/handler/AUTOFilleDataHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fj/handler/BIZExceptionHandlers.java" />
       </list>
     </option>
   </component>
@@ -181,9 +266,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="32" />
-    <option name="width" value="1936" />
+    <option name="x" value="331" />
+    <option name="y" value="63" />
+    <option name="width" value="976" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -195,7 +280,43 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fj" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -206,17 +327,24 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566367268931" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575888900102" />
+    <property name="last_opened_file_path" value="E:/works/ems-etcc/ems-generator/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fj.handler" />
+      <recent name="com.fj.exception" />
+      <recent name="com.fj.base" />
+      <recent name="com.fj.enums" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\sharding\demo\src\main\java\com\fj\base" />
       <recent name="E:\workspace\ems-etcc\ems-etcc\etcc-biz\etcc-biz-service\src\main\java\com\etcc\knowledge" />
       <recent name="E:\workspace\ems-etcc\ems-etcc\etcc-biz\etcc-biz-api\src\main\java\com\etcc\knowledge" />
     </key>
@@ -268,19 +396,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ems.sys.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TreeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ems.sys.common.util.tree.TreeUtil" />
-      <module name="ems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ems.sys.common.util.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -350,6 +465,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShardingDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="sharding-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fj.ShardingDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TraceBootstrap" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="etcc-trace" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.etcc.trace.TraceBootstrap" />
@@ -359,11 +487,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ShardingDemoApplication" />
         <item itemvalue="Application.CodeAutoGenerator" />
         <item itemvalue="Application.ResourceTypeEnum" />
         <item itemvalue="Application.RoleInfoServiceImpl" />
         <item itemvalue="Application.UserManageController" />
-        <item itemvalue="Application.TreeUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -383,6 +511,7 @@
       <workItem from="1566365500883" duration="3000" />
       <workItem from="1566365525048" duration="1674000" />
       <workItem from="1566388756926" duration="58000" />
+      <workItem from="1575883180865" duration="5642000" />
     </task>
     <task id="LOCAL-00014" summary="【update】资源添加逻辑修改">
       <created>1554729119936</created>
@@ -731,12 +860,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163422000" />
+    <option name="totallyTimeSpent" value="169064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25482833" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25804722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -747,20 +877,21 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" weight="0.23463687" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49892703" visible="true" weight="0.31731844" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49892703" visible="true" weight="0.40111732" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.30368763" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3027933" />
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50107294" side_tool="true" weight="0.3944134" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32960895" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.59664804" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.55977654" />
       <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.32936078" />
       <window_info anchor="bottom" id="Problems" order="16" />
+      <window_info anchor="right" id="aiXcoder" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -863,11 +994,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="【update】" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="473" height="290" key="Git.Branch.Popup" />
-    <state width="473" height="290" key="Git.Branch.Popup/1920.1080" />
+    <state width="475" height="292" key="Git.Branch.Popup" />
+    <state width="475" height="292" key="Git.Branch.Popup/1920.1080" />
     <state width="471" height="288" key="Git.Branch.Popup/1920.1080/1920.1080" />
     <state width="471" height="288" key="Git.Branch.Popup@1920.1080" />
-    <state width="473" height="290" key="Git.Branch.Popup@1920.1080@120dpi" />
+    <state width="475" height="292" key="Git.Branch.Popup@1920.1080@120dpi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -914,191 +1045,362 @@
           <properties />
           <option name="timeStamp" value="99" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fj/controller/EquipController.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/service/RegulationServiceImpl.java</url>
+          <line>109</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/controller/RegulationController.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/RoleManageController.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/IRoleInfoService.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/RoleInfoController.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar!/org/apache/commons/lang3/StringUtils.class">
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/mapper/AlarmListDetailMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="162">
+          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/UserLoginServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/RoleInfoServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mapper.java.vm">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/impl/UserDetailServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/service/IUserDetailService.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/UserDetailController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dto.java.vm">
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/service/AlarmListDetailServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="162">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/time/LocalDateTime.java">
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/sprd/api/IAlarmListDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+        <state relative-caret-position="277">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vo.java.vm">
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/controller/AlarmListDetailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="472">
+          <caret line="47" column="62" lean-forward="true" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/service/ISysUserLoginService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/service.java.vm">
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+        <state relative-caret-position="150">
+          <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/common/exception/SystemExceptionEnum.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/business/UserManageBusiness.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adapter.java.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="30" column="96" selection-start-line="30" selection-start-column="96" selection-end-line="30" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/resources/application.yml" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/resources/application-dev.yml" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/controller/UserManageController.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="150">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/serviceImpl.java.vm">
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/controller/AlarmDataIntergrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
+        <state relative-caret-position="172">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/common/service/impl/CurrentUserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/ButtonTypeEnum.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/ResourceTypeEnum.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/ResourceLevelEnum.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/EmsSpringBootApplication.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/adapter/SysUserLoginAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/controller/SysUserLoginController.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/domain/SysUserLogin.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/dto/SysUserLoginDto.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/entity/vo/SysUserLoginVo.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/mapper/SysUserLoginMapper.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/mapper/xml/SysUserLoginMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/sys/enums/BusinessExceptionStatusEnum.java" />
-    <entry file="file://$PROJECT_DIR$/../ems/src/main/java/com/ems/wode/service/impl/SysUserLoginServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-common/src/main/java/com/etcc/entity/model/BaseTreeNode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/configuration/config/DatasourceConfigurationOfDangDang.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state>
+          <folding>
+            <element signature="e#0#7476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/configuration/config/DatasourceConfigurationOfApache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/configuration/config/PageConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="138" column="52" lean-forward="true" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-248">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/entity/Equip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="96" column="20" lean-forward="true" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/alarm/datapackage/mapper/xml/AlarmDataPackageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/alarm/datapackage/service/AlarmDataPackageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="80" column="48" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/alarm/datapackage/service/IAlarmDataPackageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/alarm/datapackage/controller/AlarmDataPackageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/controller/EquipController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="57" column="45" lean-forward="true" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/mapper/xml/AlarmListDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1800" />
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/mapper/xml/EquipDetectResultMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3229" />
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/sprd/mapper/xml/TargetAlarmListMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2340" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.1.0/mybatis-plus-core-3.1.0-sources.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="197" column="13" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/mapper/xml/RegulationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/entity/dto/RegulationQueryDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/resources/bootstrap-local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150" />
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/api/IRegulationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/controller/RegulationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/service/RegulationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-generator/src/main/java/com/ems/CodeAutoGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="138" column="11" lean-forward="true" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/base/BaseProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/base/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/base/BaseResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/base/RpcResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/base/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/base/BaseResult.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/base/RpcResult.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/base/BizStatus.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/exception/APPServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/exception/BusinessStatusException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/handlers/BIZExceptionHandlers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="59" column="56" lean-forward="true" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/exception/FeignExceptionInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-common/src/main/java/com/etcc/exception/MeaninglessException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/enums/CommonFrameBizStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/exception/MeaninglessException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/exception/BusinessStatusException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/works/ems-etcc/ems-etcc/ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/handler/AUTOFilleDataHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/handler/AUTOFilleDataHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-admin/etcc-admin-api/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fj/handler/BIZExceptionHandlers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/api/IRegulationService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/entity/vo/RegulationVo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/entity/vo/RegulationQueryVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-common/src/main/java/com/etcc/base/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/entity/dto/RegulationQueryDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/entity/domain/Regulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1267">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/entity/dto/RegulationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ems/CodeAutoGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/BizServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="307">
+          <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
           <folding>
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-service/src/main/java/com/etcc/knowledge/controller/RegulationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ems-etcc/etcc-biz/etcc-biz-api/src/main/java/com/etcc/knowledge/adapter/RegulationAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/controller.java.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1654">
-          <caret line="72" column="88" selection-start-line="72" selection-start-column="88" selection-end-line="72" selection-end-column="88" />
         </state>
       </provider>
     </entry>
@@ -1165,7 +1467,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>etcc</last-edited>
+          <last-edited>sharding-demo</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

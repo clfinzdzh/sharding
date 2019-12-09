@@ -1,7 +1,10 @@
 package com.fj.configuration.config;
 
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
-import com.fj.configuration.algorithm.KeyPreciseShardingAlgorithm;
+import com.fj.configuration.algorithm.DBKeyPreciseShardingAlgorithm;
+import com.fj.configuration.algorithm.TableKeyPreciseShardingAlgorithm;
 import com.fj.configuration.algorithm.KeyRangeShardingAlgorithm;
 import com.fj.configuration.properties.*;
 import com.google.common.collect.Lists;
@@ -15,6 +18,7 @@ import io.shardingjdbc.core.api.config.TableRuleConfiguration;
 import io.shardingjdbc.core.api.config.strategy.StandardShardingStrategyConfiguration;
 import io.shardingjdbc.core.constant.ShardingPropertiesConstant;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +27,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+
 import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.List;
@@ -33,7 +38,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 @MapperScan(basePackages = "com.fj.mapper", sqlSessionFactoryRef = "sqlSessionFactory")
 @Configuration
-public class DatasourceConfiguraionOfApache{
+public class DatasourceConfigurationOfApache {
 
     @Autowired
     private DataSourceConstant dataSourceConstant;
@@ -45,6 +50,10 @@ public class DatasourceConfiguraionOfApache{
     private Db0S0Properties db0S0Properties;
     @Autowired
     private Db1S0Properties db1S0Properties;
+    @Autowired
+    private PaginationInterceptor paginationInterceptor;
+    @Autowired
+    private PerformanceInterceptor performanceInterceptor;
 
 
     @Bean
@@ -61,6 +70,7 @@ public class DatasourceConfiguraionOfApache{
 
     }
 
+    @Bean
     DataSource masterslave0() throws SQLException {
         Map<String, DataSource> dataSourceMap = Maps.newHashMap();
         dataSourceMap.put(db0Properties.getDatabaseName(), db0Properties.createDataSource());
@@ -73,6 +83,7 @@ public class DatasourceConfiguraionOfApache{
         return MasterSlaveDataSourceFactory.createDataSource(dataSourceMap, masterSlaveRuleConfiguration, new ConcurrentHashMap<>());
     }
 
+    @Bean
     DataSource masterslave1() throws SQLException {
         Map<String, DataSource> dataSourceMap = Maps.newHashMap();
         dataSourceMap.put(db1Properties.getDatabaseName(), db1Properties.createDataSource());
@@ -111,9 +122,10 @@ public class DatasourceConfiguraionOfApache{
         shardingRuleConfiguration.getTableRuleConfigs().addAll(tableRuleConfiguration());
         shardingRuleConfiguration.getBindingTableGroups().add("t_equip,t_equip_parts");
         shardingRuleConfiguration.setDefaultDataSourceName(dataSourceConstant.getMs0name());
-        StandardShardingStrategyConfiguration standard = new StandardShardingStrategyConfiguration("equip_id", KeyPreciseShardingAlgorithm.class.getName(), KeyRangeShardingAlgorithm.class.getName());
-        shardingRuleConfiguration.setDefaultDatabaseShardingStrategyConfig(standard);
-        shardingRuleConfiguration.setDefaultTableShardingStrategyConfig(standard);
+        StandardShardingStrategyConfiguration tableStrategy = new StandardShardingStrategyConfiguration("type", TableKeyPreciseShardingAlgorithm.class.getName(), KeyRangeShardingAlgorithm.class.getName());
+        StandardShardingStrategyConfiguration databaseStrategy = new StandardShardingStrategyConfiguration("equip_id", DBKeyPreciseShardingAlgorithm.class.getName(), KeyRangeShardingAlgorithm.class.getName());
+        shardingRuleConfiguration.setDefaultTableShardingStrategyConfig(tableStrategy);
+        shardingRuleConfiguration.setDefaultDatabaseShardingStrategyConfig(databaseStrategy);
         //ComplexShardingStrategyConfiguration complex = new ComplexShardingStrategyConfiguration("equip_id,type", KeysComplexKeysShardingAlgorithm.class.getName());
         //shardingRuleConfiguration.setDefaultDatabaseShardingStrategyConfig(complex);
         //shardingRuleConfiguration.setDefaultTableShardingStrategyConfig(complex);
@@ -124,6 +136,8 @@ public class DatasourceConfiguraionOfApache{
     public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource") DataSource dataSource) throws Exception {
         MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
+        Interceptor[] interceptors = {paginationInterceptor,performanceInterceptor};
+        sqlSessionFactoryBean.setPlugins(interceptors);
         sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/fj/**/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
