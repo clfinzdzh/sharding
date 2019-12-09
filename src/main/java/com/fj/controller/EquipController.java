@@ -1,7 +1,7 @@
 package com.fj.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.IdWorker;
+import com.fj.configuration.properties.Db0Properties;
 import com.fj.entity.Equip;
 import com.fj.service.IEquipService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/equip")
 public class EquipController {
+
+    @Autowired
+    private Db0Properties db0Properties;
 
     @Autowired
     public IEquipService equipService;
@@ -38,6 +41,13 @@ public class EquipController {
         QueryWrapper<Equip> wrapper = new QueryWrapper<>();
         wrapper.in("id", ids);
         return equipService.list(wrapper);
+    }
+
+    @GetMapping("/test")
+    public Object object(){
+
+        return db0Properties.getDatabaseName();
+
     }
 
 }

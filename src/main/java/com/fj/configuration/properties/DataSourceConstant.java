@@ -4,9 +4,9 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "masterslave")
-@Component
 @Data
+@Component
+@ConfigurationProperties(prefix = "masterslave")
 public class DataSourceConstant {
 
     private String msname;
@@ -20,4 +20,5 @@ public class DataSourceConstant {
     private String executorSize;
 
     private String logicTableName;
+
 }

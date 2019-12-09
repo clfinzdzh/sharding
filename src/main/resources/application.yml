@@ -1,45 +1,41 @@
 spring:
   application:
     name: sharding-demo
-
 server:
   port: 8090
-
 master:
-  equip0:
-    url: jdbc:mysql://localhost:3306/equip_db_0?characterEncoding=utf8&useSSL=false
-    username: root
-    password:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    databaseName: equip_db_0
-  equip1:
-    url: jdbc:mysql://localhost:3306/equip_db_1?characterEncoding=utf8&useSSL=false
-    username: root
-    password:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    databaseName: equip_db_1
+    equip0:
+        url: jdbc:mysql://localhost:3306/equip_db_0?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+        driverClassName: com.mysql.cj.jdbc.Driver
+        databaseName: equip_db_0
+    equip1:
+        url: jdbc:mysql://localhost:3306/equip_db_1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+        driverClassName: com.mysql.cj.jdbc.Driver
+        databaseName: equip_db_1
 slave:
-  equip0:
-    url: jdbc:mysql://localhost:3306/equip_dbs_0?characterEncoding=utf8&useSSL=false
-    username: root
-    password:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    databaseName: equip_dbs_0
-  equip1:
-    url: jdbc:mysql://localhost:3306/equip_dbs_1?characterEncoding=utf8&useSSL=false
-    username: root
-    password:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    databaseName: equip_dbs_1
-
+    equip0:
+        url: jdbc:mysql://localhost:3306/equip_dbs_0?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+        driverClassName: com.mysql.cj.jdbc.Driver
+        databaseName: equip_dbs_0
+    equip1:
+        url: jdbc:mysql://localhost:3306/equip_dbs_1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+        driverClassName: com.mysql.cj.jdbc.Driver
+        databaseName: equip_dbs_1
 masterslave:
-  msname: datasource
-  ms0name: masterslave0
-  ms1name: masterslave1
-  sqlShow: true
-  executorSize: 4
-
+    msname: datasource
+    ms0name: masterslave0
+    ms1name: masterslave1
+    sqlShow: true
+    executorSize: 4
 mybatis-plus:
   configuration:
-    map-underscore-to-camel-case: true
+  map-underscore-to-camel-case: true
 

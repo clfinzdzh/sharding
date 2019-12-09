@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@EnableConfigurationProperties
 @EnableTransactionManagement(proxyTargetClass = true)
+@EnableConfigurationProperties
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class ShardingDemoApplication {
 

@@ -1,10 +1,8 @@
-package com.fj.configuration;
+package com.fj.configuration.config;
 
-import java.util.Properties;
-
+import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import com.fj.configuration.algorithm.KeyPreciseShardingAlgorithm;
 import com.fj.configuration.algorithm.KeyRangeShardingAlgorithm;
-import com.fj.configuration.algorithm.KeysComplexKeysShardingAlgorithm;
 import com.fj.configuration.properties.*;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -14,25 +12,28 @@ import io.shardingjdbc.core.api.algorithm.masterslave.MasterSlaveLoadBalanceAlgo
 import io.shardingjdbc.core.api.config.MasterSlaveRuleConfiguration;
 import io.shardingjdbc.core.api.config.ShardingRuleConfiguration;
 import io.shardingjdbc.core.api.config.TableRuleConfiguration;
-import io.shardingjdbc.core.api.config.strategy.ComplexShardingStrategyConfiguration;
 import io.shardingjdbc.core.api.config.strategy.StandardShardingStrategyConfiguration;
 import io.shardingjdbc.core.constant.ShardingPropertiesConstant;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 @MapperScan(basePackages = "com.fj.mapper", sqlSessionFactoryRef = "sqlSessionFactory")
 @Configuration
-public class DatasourceConfiguraionOfApache {
+public class DatasourceConfiguraionOfApache{
 
     @Autowired
     private DataSourceConstant dataSourceConstant;
@@ -45,9 +46,10 @@ public class DatasourceConfiguraionOfApache {
     @Autowired
     private Db1S0Properties db1S0Properties;
 
+
     @Bean
     DataSource dataSource() throws SQLException {
-        Map<String, DataSource> dataSourceMap = Maps.newTreeMap();
+        Map<String, DataSource> dataSourceMap = Maps.newHashMap();
         dataSourceMap.put(dataSourceConstant.getMs0name(), masterslave0());
         dataSourceMap.put(dataSourceConstant.getMs1name(), masterslave1());
         Properties properties = new Properties();
@@ -59,7 +61,7 @@ public class DatasourceConfiguraionOfApache {
 
     }
 
-    private DataSource masterslave0() throws SQLException {
+    DataSource masterslave0() throws SQLException {
         Map<String, DataSource> dataSourceMap = Maps.newHashMap();
         dataSourceMap.put(db0Properties.getDatabaseName(), db0Properties.createDataSource());
         dataSourceMap.put(db0S0Properties.getDatabaseName(), db0S0Properties.createDataSource());
@@ -71,7 +73,7 @@ public class DatasourceConfiguraionOfApache {
         return MasterSlaveDataSourceFactory.createDataSource(dataSourceMap, masterSlaveRuleConfiguration, new ConcurrentHashMap<>());
     }
 
-    private DataSource masterslave1() throws SQLException {
+    DataSource masterslave1() throws SQLException {
         Map<String, DataSource> dataSourceMap = Maps.newHashMap();
         dataSourceMap.put(db1Properties.getDatabaseName(), db1Properties.createDataSource());
         dataSourceMap.put(db1S0Properties.getDatabaseName(), db1S0Properties.createDataSource());
@@ -116,6 +118,23 @@ public class DatasourceConfiguraionOfApache {
         //shardingRuleConfiguration.setDefaultDatabaseShardingStrategyConfig(complex);
         //shardingRuleConfiguration.setDefaultTableShardingStrategyConfig(complex);
         return shardingRuleConfiguration;
+    }
+
+    @Bean
+    public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource") DataSource dataSource) throws Exception {
+        MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
+        sqlSessionFactoryBean.setDataSource(dataSource);
+        sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/fj/**/*.xml"));
+        return sqlSessionFactoryBean.getObject();
+    }
+
+    /**
+     * 分库分表数据源的事务管理器
+     */
+    @Bean
+    public DataSourceTransactionManager dataSourceTransactionManager(@Qualifier("dataSource")
+                                                                             DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
     }
 
 }
