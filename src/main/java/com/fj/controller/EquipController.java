@@ -17,9 +17,9 @@ import java.util.List;
 @RequestMapping("/equip")
 public class EquipController {
 
-
     @Autowired
     public IEquipService equipService;
+
     @Autowired
     private EquipMapper equipMapper;
 
@@ -58,6 +58,12 @@ public class EquipController {
         queryWrapper.orderByDesc("equip_id");
         IPage<Equip> equipIPage1 = equipMapper.selectPage(pageObject, new QueryWrapper<>());
         return equipIPage1;
+    }
+
+    @GetMapping("/between")
+    public Object between() {
+        List<Equip> equips = equipMapper.selectBetween();
+        return equips;
     }
 
 }

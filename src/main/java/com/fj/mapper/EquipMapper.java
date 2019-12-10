@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface EquipMapper extends BaseMapper<Equip> {
 
-    List<Equip> selectPageResult(@Param("start") long start, @Param("size") long size);
+    List<Equip> selectBetween();
 }

@@ -8,4 +8,15 @@
         limit #{start},#{size}
     </select>
 
+    <select id="selectBetween" resultType="com.fj.entity.Equip">
+        SELECT  *
+        FROM (
+        SELECT COUNT(*) NAME,
+                IF(TYPE=0,100,200) 'equip_id',
+                IF(TYPE=0,200,100) 'type'
+                FROM t_equip_0
+                WHERE NAME LIKE CONCAT("戴尔","%")
+                GROUP BY TYPE
+        )a
+    </select>
 </mapper>
